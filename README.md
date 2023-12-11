@@ -16,6 +16,6 @@ https://www.thewitcher.com/us/fr/witcher3#home
 Click to open vidéo
 [![screencast](./img/1.png)](./video/screencast.mp4)
 
-Section 6 et 7 redondante (Autorisation de ne pas reproduire)
-Autorisation d'ajouter des inputs pour la section contact
+Section 6 et 7 redondante (Autorisation de ne pas reproduire)  
+Autorisation d'ajouter des inputs pour la section contact  
 Pas de scroll en JavaScript pour l'expérience utilisateur
