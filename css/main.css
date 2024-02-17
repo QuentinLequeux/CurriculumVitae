@@ -1,0 +1,61 @@
+.menu {
+
+}
+.hover:hover{
+    color: red;
+}
+.nav a{
+    text-decoration: none;
+}
+.nav-title {
+    visibility: hidden;
+}
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    /*position: absolute;*/
+}
+#sidebar {
+    /*position: absolute;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#sidebar a {
+    text-decoration: none;
+}
+#home {
+    min-height: 100vh;
+}
+#about {
+    min-height: 100vh;
+}
+#skills {
+    min-height: 100vh;
+}
+#projects {
+    min-height: 100vh;
+}
+#news {
+    min-height: 100vh;
+}
+#hobbies {
+    min-height: 100vh;
+}
+#exp {
+    min-height: 100vh;
+}
+#comment {
+    min-height: 100vh;
+}
+#contact {
+    min-height: 100vh;
+}
+#footer {
+    background-color: black;
+    min-height: 100vh;
+}
+main{
+    position: relative;
+}
