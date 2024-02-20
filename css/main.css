@@ -1,61 +1,162 @@
-.menu {
+body {
+    font-family: "ff-good-web-pro-condensed", sans-serif;
+    margin: 0;
+}
 
-}
-.hover:hover{
-    color: red;
-}
-.nav a{
-    text-decoration: none;
-}
-.nav-title {
+.hidden {
     visibility: hidden;
+    position: absolute;
 }
+
+.menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
 .nav {
     display: flex;
     justify-content: flex-end;
     list-style: none;
-    /*position: absolute;*/
+    text-transform: uppercase;
 }
+
+.nav li {
+    margin: 0 20px 0 20px;
+}
+
+.nav li a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    color: red;
+}
+
 #sidebar {
-    /*position: absolute;*/
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    right: 0;
+    top: 40%;
 }
+
 #sidebar a {
     text-decoration: none;
+    color: white;
 }
+
 #home {
     min-height: 100vh;
+    background-image: url("/img/bckg1.jpg");
+    background-size: cover;
 }
+
+.wrapper {
+    margin-left: 40%;
+    padding-top: 20%;
+}
+
+.wrapper h2 {
+    margin-top: 0;
+}
+
+#home a {
+    text-decoration: none;
+}
+
+#home a:first-of-type {
+    color: red;
+}
+
+#home a:last-of-type {
+    color: white;
+}
+
 #about {
     min-height: 100vh;
 }
+
 #skills {
     min-height: 100vh;
 }
+
 #projects {
     min-height: 100vh;
+    background-image: url("/img/bckg2.jpg");
+    background-size: cover;
 }
+
+.projects span{
+    color: white;
+}
+.projects h2 {
+    color: white;
+}
+
 #news {
     min-height: 100vh;
 }
+
+.news {
+    max-width: 1500px;
+    margin: auto;
+}
+.news h2 {
+    text-align: center;
+}
+
 #hobbies {
     min-height: 100vh;
 }
+
 #exp {
     min-height: 100vh;
 }
+
 #comment {
     min-height: 100vh;
 }
+
 #contact {
     min-height: 100vh;
 }
+
 #footer {
     background-color: black;
     min-height: 100vh;
 }
-main{
-    position: relative;
+
+.links-top {
+    display: flex;
+    justify-content: center;
+}
+
+.links-top a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 32px;
+    letter-spacing: .2em;
+}
+
+.links-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5em;
+}
+
+.links-bottom a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.125em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 2em;
+    letter-spacing: .2em;
 }

@@ -5,300 +5,361 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Quentin Lequeux">
-    <meta name="description" content="Site internet mettant en évidence les compétences, l'expérience et le parcours scolaire de Quentin Lequeux, développeur web et étudiant à la Haute Ecole de la Province de Liège">
+    <meta name="description"
+          content="Site internet mettant en évidence les compétences, l'expérience et le parcours scolaire de Quentin Lequeux, développeur web et étudiant à la Haute Ecole de la Province de Liège">
     <meta name="keywords" content="HTML, CSS, Javascript, SQL, Web, student, Quentin Lequeux, Quentin, Lequeux, HEPL, design, développeur, CV, PHP,
     TypeScript, infographie, développeur web, étudiant">
     <title>CV Développeur Web - Quentin Lequeux</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/lcq5nch.css">
 </head>
-    <body itemscope itemtype="https://schema.org/Person">
-        <header>
-            <h1 aria-level="1" role="heading">
-                CV Quentin Lequeux
-            </h1>
-            <nav class="menu">
-                <h2 class="nav-title" aria-level="2" role="heading">
-                    Navigation principale
-                </h2>
-                <a href="#">Quentin&nbsp;Lequeux</a>
-                <ul class="nav">
-                    <li>A&nbsp;propos
-                        <ul>
-                            <li><a href="#about" title="Vers la section coordonnées">Coordonnées</a></li>
-                            <li><a href="#skills" title="Vers la section compétences">Compétences</a></li>
-                            <li><a href="#projects" title="Vers la section réalisations">Réalisations</a></li>
-                            <li><a href="#news" title="Vers la section actualités">Actualités</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#hobbies" title="Vers la section loisirs">Loisirs</a></li>
-                    <li><a href="#exp" title="Vers la section expériences">Expériences</a></li>
-                    <li><a href="#comment" title="Vers la section commentaires">Commentaires</a></li>
-                    <li><a href="#contact" title="Vers la section contact">Contact</a></li> <!--button-->
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div id="sidebar">
-                <a href="#home">Acceuil</a>
-                <a href="#about">Coordonnées</a>
-                <a href="#skills">Compétences</a>
-                <a href="#projects">Réalisations</a>
-                <a href="#news">Actualités</a>
-                <a href="#hobbies">Loisirs</a>
-                <a href="#exp">Expériences</a>
-                <a href="#comment">Recommandations</a>
-                <a href="#contact">Contact</a>
-                <a href="#footer">Footer</a>
-            </div>
-            <section id="home">
-                <h2 aria-level="2" role="heading" itemprop="name">
-                    Quentin Lequeux
-                </h2>
-                <!--Logo-->
-                <p itemprop="JobTitle">Développeur Web</p>
-                <p>Je m'appelle Quentin Lequeux, je suis <span itemprop="nationality">belge</span> et actuellement étudiant à l'<abbr title="Haute Ecole de la Province de Liège">HEPL</abbr>. Né le <time itemprop="birthDate" datetime="1995-12-05">5 décembre 1995</time>, j'habite dans la région de Namur.</p>
-                <a href="#projects" title="Vers mon portfolio">Découvrez-moi&nbsp&nbsp;!</a>
-                <a href="#contact" title="Vers mon formulaire de contact">Contactez-moi&nbsp&nbsp;!</a>
-                <!--backround-image-->
-                <!--Animation cercle-->
-            </section>
-            <section id="about">
-                <h2 aria-level="2" role="heading">
-                    A propos de moi
-                </h2>
-                <!--Logo-->
-                <aside>
-                    <h3 aria-level="3" role="heading">
-                        Coordonnées
-                    </h3>
-                    <p>Numéro de téléphone&nbsp&nbsp;:</p>
-                    <span itemprop="telephone"><a href="" title="Appeler ce numéro">+32(0)473644221</a></span>
-                    <p>Adresse email&nbsp&nbsp;:</p>
-                    <span itemprop="email"><a href="" title="Envoyer un email à cette adresse">quent789@gmail.com</a></span>
-                    <p>Adresse postale&nbsp&nbsp;:</p>
-                    <a href="" title="Ouvrir dans Google Maps" itemscope itemtype="https://schema.org/PostalAddress" itemprop="address"><span itemprop="streetAddress" title="">Rue de la brasserie 12b</span>, <span itemprop="postalCode">5080</span> <span itemprop="addressLocality">Warisoulx</span> <span itemprop="addressCountry">Belgique</span></a>
-                </aside>
-                <img src="" alt="Deux photos de moi avant et après"> <!--Avant/Après-->
-                <!--Animation cercle-->
-            </section>
-            <section id="skills" itemscope itemtype="https://schema.org/Occupation" itemprop="hasOccupation">
-                <h2 aria-level="2" role="heading">
-                    Mes compétences
-                </h2>
-                <!--Logo-->
-                <div>
-                    <span itemprop="skills">HTML</span>
-                    <span itemprop="skills">CSS</span>
-                    <span itemprop="skills">Javascript</span>
-                    <span itemprop="skills">MySQL</span>
-                    <span itemprop="skills">PHP</span>
-                    <span itemprop="skills">Typescript</span>
-                    <span itemprop="skills">Wordpress</span>
-                </div>
-                <!--Slider(Photos)-->
-                <!--Animation cercle-->
-            </section>
-            <section id="projects" itemscope itemtype="https://schema.org/CreativeWork" itemprop="knowAbout">
-                <h2 aria-level="2" role="heading">
-                    Mes réalisations
-                </h2>
-                <!--Logo-->
-                <span itemprop="workExample">SiteCV</span>
-                <span itemprop="workExample">Portfolio</span>
-                <span itemprop="workExample">Jiris</span>
-                <span itemprop="workExample">Design d'applications</span>
-                <!--Site client, 3D-->
-                <!--Pop-up : 3 photos + Description + background-image + slider + Logo-->
-                <!--background-image-->
-                <!--Animation cercle-->
-            </section>
-            <section id="news">
-                <h2 aria-level="2" role="heading">
-                    Actualités
-                </h2>
-                <!--Logo-->
-                <a href="https://www.alsacreations.com/astuce/lire/1925-Optimiser-le-poids-des-images-SVG.html" title="Vers le site Alsacréations"><img src="./img/logo-alsa.png" alt="Logo ...">Alsacréations : Optimiser le poids des SVG</a>
-                <a href="https://www.alsacreations.com/tuto/lire/1921-Animer-un-bouton-burger-simple-avec-SVG-et-CSS.html" title="Vers le site du MDN"><img src="./img/logo-alsa.png" alt="Logo ...">Alsacréations : Animer un bouton burger simple avec SVG et CSS</a>
-                    <ul>
-                        <li><a href="" title="Vers le site Can I Use">?</a></li>
-                        <li><a href="" title="Vers le site Codpen">?</a></li>
-                        <li><a href="" title="Vers le site de Wes Bos">?</a></li>
-                        <li><a href="" title="Vers le site Autoprefixer">?</a></li>
-                        <a href="">Voir plus d'actualités</a> <!--Autre page ?-->
-                    </ul>
-                <!--Animation cercle-->
-            </section>
-            <section id="hobbies">
-                <h2 aria-level="2" role="heading">
-                    Centres d'intérèts
-                </h2>
-                <!--Logo-->
+<body itemscope itemtype="https://schema.org/Person">
+<header>
+    <h1 aria-level="1" role="heading" class="hidden">
+        CV Quentin Lequeux
+    </h1>
+    <nav class="menu">
+        <h2 class="hidden" aria-level="2" role="heading">
+            Navigation principale
+        </h2>
+        <!--<a href="#">Quentin&nbsp;Lequeux</a>-->
+        <ul class="nav">
+            <li>A&nbsp;propos
                 <ul>
-                    <li>Sports</li>
-                    <li>Loisirs</li>
-                    <li>Travail</li>
+                    <li><a href="#about" title="Vers la section coordonnées">Coordonnées</a></li>
+                    <li><a href="#skills" title="Vers la section compétences">Compétences</a></li>
+                    <li><a href="#projects" title="Vers la section réalisations">Réalisations</a></li>
+                    <li><a href="#news" title="Vers la section actualités">Actualités</a></li>
                 </ul>
-                <span>Pêche</span>
-                <span>Jeux vidéos</span>
-                <span>Lecture</span>
-                <span>Voyage</span>
-                <span>Cuisine</span>
-                <!--Liste ?-->
-                <!--Animation cercle-->
-            </section>
-            <section id="exp">
-                <h2 aria-level="2" role="heading">
-                    Mon parcours
-                </h2>
-                <!--Logo-->
-                <a href="">Formations</a>
-                <a href="">Parcours</a> <!--Photos représentant la formation-->
-                <div>
-                    <p>2014-2015</p>
-                    <p>7ème - CESS</p>
-                    <p itemprop="alumniOf">Institut d’enseignement des arts techniques sciences et artisanats - Namur</p>
-                    <p>Année d'obtention de mon <abbr title="Certificat d'enseignement secondaire supérieur">CESS</abbr> à l'Institut d’enseignement des arts techniques sciences et artisanats à Namur,
-                        option création et restauration de meubles. Ainsi que mon diplôme de gestion de base.</p>
-                    <a href="">Lire la suite</a>
-                    <!--background-image-->
-                    <!--Pop-up-->
-                </div>
-                <div>
-                    <p>2018-2019</p>
-                    <p>7ème Assistant Métiers de la Prévention et de la Sécurité</p>
-                    <p itemprop="alumniOf">Institut Provincial d'Enseignement Supérieur - Seilles</p>
-                    <p>Obtention de mon attestation de gardiennage, gardien de la paix et steward football ainsi que plusieurs formations telles que
-                        l'EPI (Equipier Première Intervention) et secourisme industriel.</p>
-                    <a href="">Lire la suite</a>
-                    <!--background-image-->
-                    <!--Pop-up-->
-                </div>
-                <div>
-                    <p>2019-2022</p>
-                    <p itemprop="jobTitle">Agent de sécurité</p>
-                    <p itemprop="workLocation">Université du Luxembourg - Belval</p>
-                    <p>Juillet 2019 à Janvier 2022
-                        Agent de sécurité à l'Université du Luxembourg (Belval) pour la société <span itemprop="worksFor">Dussmann Security</span>. J'ai effectué des tâches tels que la
-                        réception, contrôle d'accès, surveillance caméra, gestion de logiciel intrusion,...</p>
-                    <a href="">Lire la suite</a>
-                    <!--background-image-->
-                    <!--Pop-up-->
-                </div>
-                <div>
-                    <p>2022-2023</p>
-                    <p>Bachelier Techniques Infographiques</p>
-                    <p itemprop="alumniOf">Haute École de la Province de Liège - Seraing</p>
-                    <p itemscope itemtype="https://schema.org/Occupation" itemprop="hasOccupation">Première année de mon bachelier en techniques infographiques.
-                        Acquisitions de multiples compétences : HTML, CSS, Suite Adobe(<span itemprop="skills">Photoshop</span>, <span>Illustrator</span>, <span>Premiere</span>, <span>Xd</span>) <span>Maya</span>, <span>Typographie</span></p>
-                    <a href="">Lire la suite</a>
-                    <!--background-image-->
-                    <!--Pop-up-->
-                </div>
-                <div>
-                    <p>2023-2024</p>
-                    <p>Bachelier Techniques Infographiques option Web</p>
-                    <p>Haute École de la Province de Liège - Seraing</p>
-                    <p>Deuxième année de mon bachelier en techniques infographiques
-                        Acquisitions des compétences : MySQL, Javascript, PHP, Wordpress, Typescript</p>
-                    <a href="">Lire la suite</a>
-                    <!--Pop-up-->
-                    <!--background-image-->
-                </div>
-                <!--Animation cercle-->
-            </section>
-            <section id="comment">
-                <h2 aria-level="2" role="heading">
-                    Ils m'ont fait confiance&nbsp;!
-                </h2>
-                <!--Logo-->
-                <p>Plusieurs avis sur mon travail&nbsp;:</p>
-                <div>
-                    <a href="" title="Vers le site ..."><img src="./img/logo-amazon.png" alt="Logo d'Amazon" width="300" height="300"></a>
-                    <a href="" title="Vers le site ..."><img src="./img/logo-blizzard.png" alt="Logo Blizzard" width="300" height="150"></a>
-                    <a href="" title="Vers le site ..."><img src="./img/logo-arenanet.png" alt="Logo Arenanet" width="300" height="300"></a>
-                    <!--Slider-->
-                </div>
-                <!--Animation cercle-->
-            </section>
-            <section id="contact">
-                <h2 aria-level="2" role="heading">
-                    Contactez-moi&nbsp;!
-                </h2>
-                <!--Logo-->
-                <p>Les champs &#42; sont obligatoires&nbsp;!</p>
-                <form id="" action="" method="post">
-                    <div>
-                        <label for="name">
-                            Nom complet&nbsp&nbsp;: &#42;
-                        </label>
-                        <input id="name" type="text" name="name" placeholder="Quentin Lequeux">
-                    </div>
-                    <div>
-                        <label for="email">
-                            Adresse email&nbsp&nbsp;: &#42;
-                        </label>
-                        <input id="email" type="email" name="email" placeholder="exemple@exemple.com">
-                    </div>
-                    <div>
-                        <label for="message">
-                            Message&nbsp&nbsp;: &#42;
-                        </label>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Ecrivez votre message ici"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit">
-                            Envoyer
-                        </button>
-                    </div>
-                </form>
-                <!--Animation cercle-->
-            </section>
-        </main>
-        <footer>
-            <section id="footer">
-                <h2 aria-level="2" role="heading">
-                    Footer
-                </h2>
-                <div>
-                    <a href="https://www.alsacreations.com/" title="Vers le site Alsacréations">Alsacréations</a>
-                    <a href="https://css-tricks.com/" title="Vers le site du CSS-Tricks">CSS-Tricks</a>
-                    <a href="https://caniuse.com/" title="Vers le site Can I Use">Can I Use</a>
-                    <a href="https://codepen.io/" title="Vers le site CodePen">CodePen</a>
-                </div>
-                <div>
-                    <a href="" title="Vers la page LinkedIn de Quentin Lequeux">LinkedIn</a>
-                    <a href="https://github.com/QuentinLequeux" title="Vers le profil GitHub de Quentin Lequeux">GitHub</a>
-                    <a href="" title="Vers la page Facebook de Quentin Lequeux">Facebook</a>
-                    <a href="" title="Vers le profil Behance de Quentin Lequeux">Behance</a>
-                </div>
-                <div>
-                    <a href="https://www.hepl.be/fr" title="Vers le site web de la Haute Ecole de la Province de Liège"><img src="" alt="Logo de la Haute Ecole de la Province de Liège"></a>
-                    <a href="https://www.provincedeliege.be/" title="Vers le site web de la Province de Liège"><img src="" alt="Logo de la Province de Liège"></a>
-                </div>
-                <div>
-                    <p>
-                        &#169; 2024 Lequeux Quentin. Tous droits réservés. Crée par Quentin Lequeux.
-                    </p>
-                </div>
-                <div>
-                    <span>Français</span> <!--Dropdown (Anglais)-->
-                </div>
-                <div>
-                    <a href="https://www.jetbrains.com/fr-fr/phpstorm/" title="Vers le site de PhpStorm"><img src="" alt="Icône PhpStorm"></a>
-                    <a href="" title="Vers le site d'Adobe Xd"><img src="" alt="Icône Adobe Xd"></a>
-                    <a href="" title="Vers le site d'Adobe Illustrator"><img src="" alt="Icône Adobe Illustrator"></a>
-                    <a href="" title="Vers le site Firefox"><img src="" alt="Icône Mozilla Firefox"></a>
-                    <a href="" title="Vers le site GitHub"><img src="" alt="Icône GitHub"></a>
-                </div>
-                <div>
-                    <a href="https://gtmetrix.com/" title="Vers le site de GTmetrix">GTmetrix</a>
-                    <a href="https://schema.org/" title="Vers le site de Schema.org">Schema.org</a>
-                    <a href="https://autoprefixer.github.io/" title="Vers le site de Autoprefixer">Autoprefixer</a>
-                    <a href="https://dribbble.com/" title="Vers le site de Dribbble">Dribbble</a>
-                </div>
-                <!--Background-color : Noir-->
-            </section>
-        </footer>
-    </body>
-    <!--<script src="index.js"></script>-->
+            </li>
+            <li><a href="#hobbies" title="Vers la section loisirs">Loisirs</a></li>
+            <li><a href="#exp" title="Vers la section expériences">Expériences</a></li>
+            <li><a href="#comment" title="Vers la section commentaires">Commentaires</a></li>
+            <li><a href="#contact" title="Vers la section contact">Contact</a></li> <!--button-->
+        </ul>
+    </nav>
+</header>
+<main>
+    <div id="sidebar">
+        <a href="#home">Acceuil</a>
+        <a href="#about">Coordonnées</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Réalisations</a>
+        <a href="#news">Actualités</a>
+        <a href="#hobbies">Loisirs</a>
+        <a href="#exp">Expériences</a>
+        <a href="#comment">Recommandations</a>
+        <a href="#contact">Contact</a>
+        <a href="#footer">Footer</a>
+    </div>
+    <section id="home">
+        <div class="wrapper">
+            <h2 aria-level="2" role="heading" itemprop="name">
+                Quentin Lequeux
+            </h2>
+            <!--Logo-->
+            <p itemprop="JobTitle">Développeur Web</p>
+            <p>Je m'appelle Quentin Lequeux, je suis <span itemprop="nationality">belge</span> et actuellement étudiant à l'<abbr
+                    title="Haute Ecole de la Province de Liège">HEPL</abbr>. Né le
+                <time itemprop="birthDate" datetime="1995-12-05">5 décembre 1995</time>
+                , j'habite dans la région de Namur.
+            </p>
+            <a href="#projects" title="Vers mon portfolio">Découvrez-moi&nbsp&nbsp;!</a>
+            <a href="#contact" title="Vers mon formulaire de contact">Contactez-moi&nbsp&nbsp;!</a>
+            <!--backround-image-->
+            <!--Animation cercle-->
+        </div>
+    </section>
+    <section id="about">
+        <h2 aria-level="2" role="heading">
+            A propos de moi
+        </h2>
+        <!--Logo-->
+        <aside>
+            <h3 aria-level="3" role="heading">
+                Coordonnées
+            </h3>
+            <p>Numéro de téléphone&nbsp&nbsp;:</p>
+            <span itemprop="telephone"><a href="" title="Appeler ce numéro">+32(0)473644221</a></span>
+            <p>Adresse email&nbsp&nbsp;:</p>
+            <span itemprop="email"><a href="" title="Envoyer un email à cette adresse">quent789@gmail.com</a></span>
+            <p>Adresse postale&nbsp&nbsp;:</p>
+            <a href="" title="Ouvrir dans Google Maps" itemscope itemtype="https://schema.org/PostalAddress"
+               itemprop="address"><span itemprop="streetAddress" title="">Rue de la brasserie 12b</span>, <span
+                    itemprop="postalCode">5080</span> <span itemprop="addressLocality">Warisoulx</span> <span
+                    itemprop="addressCountry">Belgique</span></a>
+        </aside>
+        <img src="" alt="Deux photos de moi avant et après"> <!--Avant/Après-->
+        <!--Animation cercle-->
+    </section>
+    <section id="skills" itemscope itemtype="https://schema.org/Occupation" itemprop="hasOccupation">
+        <h2 aria-level="2" role="heading">
+            Mes compétences
+        </h2>
+        <!--Logo-->
+        <div>
+            <span itemprop="skills">HTML</span>
+            <span itemprop="skills">CSS</span>
+            <span itemprop="skills">Javascript</span>
+            <span itemprop="skills">MySQL</span>
+            <span itemprop="skills">PHP</span>
+            <span itemprop="skills">Typescript</span>
+            <span itemprop="skills">Wordpress</span>
+        </div>
+        <!--Slider(Photos)-->
+        <!--Animation cercle-->
+    </section>
+    <section id="projects" itemscope itemtype="https://schema.org/CreativeWork" itemprop="knowAbout">
+        <div class="projects">
+            <h2 aria-level="2" role="heading">
+                Mes réalisations
+            </h2>
+            <!--Logo-->
+            <div>
+                <img src="./img/" width="304" height="176" alt="">
+                <span itemprop="workExample">SiteCV</span>
+            </div>
+            <div>
+                <img src="./img/" width="304" height="176" alt="">
+                <span itemprop="workExample">Portfolio</span>
+            </div>
+            <div>
+                <img src="./img/" width="304" height="176" alt="">
+                <span itemprop="workExample">Jiris</span>
+            </div>
+            <div>
+                <img src="./img/" width="304" height="176" alt="">
+                <span itemprop="workExample">Design d'applications</span>
+            </div>
+            <!--Site client, 3D-->
+            <!--Pop-up : 3 photos + Description + background-image + slider + Logo-->
+            <!--background-image-->
+            <!--Animation cercle-->
+        </div>
+    </section>
+    <section id="news">
+        <div class="news">
+            <h2 aria-level="2" role="heading">
+                Actualités
+            </h2>
+            <!--Logo-->
+            <article>
+                <h3 aria-level="3" role="heading">
+                    Alsacréations : Optimiser le poids des SVG
+                </h3>
+                <a href="https://www.alsacreations.com/astuce/lire/1925-Optimiser-le-poids-des-images-SVG.html"
+                   title="Vers le site Alsacréations">
+                    <img src="./img/logo-alsa.png" alt="Logo ...">
+                </a>
+            </article>
+            <article>
+                <h3 aria-level="3" role="heading">
+                    Alsacréations : Animer un bouton burger simple avec SVG et CSS
+                </h3>
+                <a href="https://www.alsacreations.com/tuto/lire/1921-Animer-un-bouton-burger-simple-avec-SVG-et-CSS.html"
+                   title="Vers le site du MDN">
+                    <img src="./img/logo-alsa.png" alt="Logo ...">
+                </a>
+            </article>
+            <ul>
+                <li><a href="" title="Vers le site Can I Use">?</a></li>
+                <li><a href="" title="Vers le site Codpen">?</a></li>
+                <li><a href="" title="Vers le site de Wes Bos">?</a></li>
+                <li><a href="" title="Vers le site Autoprefixer">?</a></li>
+                <a href="">Voir plus d'actualités</a> <!--Autre page ?-->
+            </ul>
+            <!--Animation cercle-->
+        </div>
+    </section>
+    <section id="hobbies">
+        <h2 aria-level="2" role="heading">
+            Centres d'intérèts
+        </h2>
+        <!--Logo-->
+        <ul>
+            <li>Sports</li>
+            <li>Loisirs</li>
+            <li>Travail</li>
+        </ul>
+        <span>Pêche</span>
+        <span>Jeux vidéos</span>
+        <span>Lecture</span>
+        <span>Voyage</span>
+        <span>Cuisine</span>
+        <!--Liste ?-->
+        <!--Animation cercle-->
+    </section>
+    <section id="exp">
+        <h2 aria-level="2" role="heading">
+            Mon parcours
+        </h2>
+        <!--Logo-->
+        <a href="">Formations</a>
+        <a href="">Parcours</a> <!--Photos représentant la formation-->
+        <div>
+            <p>2014-2015</p>
+            <p>7ème - CESS</p>
+            <p itemprop="alumniOf">Institut d’enseignement des arts techniques sciences et artisanats - Namur</p>
+            <p>Année d'obtention de mon <abbr title="Certificat d'enseignement secondaire supérieur">CESS</abbr> à
+                l'Institut d’enseignement des arts techniques sciences et artisanats à Namur,
+                option création et restauration de meubles. Ainsi que mon diplôme de gestion de base.</p>
+            <a href="">Lire la suite</a>
+            <!--background-image-->
+            <!--Pop-up-->
+        </div>
+        <div>
+            <p>2018-2019</p>
+            <p>7ème Assistant Métiers de la Prévention et de la Sécurité</p>
+            <p itemprop="alumniOf">Institut Provincial d'Enseignement Supérieur - Seilles</p>
+            <p>Obtention de mon attestation de gardiennage, gardien de la paix et steward football ainsi que plusieurs
+                formations telles que
+                l'EPI (Equipier Première Intervention) et secourisme industriel.</p>
+            <a href="">Lire la suite</a>
+            <!--background-image-->
+            <!--Pop-up-->
+        </div>
+        <div>
+            <p>2019-2022</p>
+            <p itemprop="jobTitle">Agent de sécurité</p>
+            <p itemprop="workLocation">Université du Luxembourg - Belval</p>
+            <p>Juillet 2019 à Janvier 2022
+                Agent de sécurité à l'Université du Luxembourg (Belval) pour la société <span itemprop="worksFor">Dussmann Security</span>.
+                J'ai effectué des tâches tels que la
+                réception, contrôle d'accès, surveillance caméra, gestion de logiciel intrusion,...</p>
+            <a href="">Lire la suite</a>
+            <!--background-image-->
+            <!--Pop-up-->
+        </div>
+        <div>
+            <p>2022-2023</p>
+            <p>Bachelier Techniques Infographiques</p>
+            <p itemprop="alumniOf">Haute École de la Province de Liège - Seraing</p>
+            <p itemscope itemtype="https://schema.org/Occupation" itemprop="hasOccupation">Première année de mon
+                bachelier en techniques infographiques.
+                Acquisitions de multiples compétences : HTML, CSS, Suite Adobe(<span itemprop="skills">Photoshop</span>,
+                <span>Illustrator</span>, <span>Premiere</span>, <span>Xd</span>) <span>Maya</span>,
+                <span>Typographie</span></p>
+            <a href="">Lire la suite</a>
+            <!--background-image-->
+            <!--Pop-up-->
+        </div>
+        <div>
+            <p>2023-2024</p>
+            <p>Bachelier Techniques Infographiques option Web</p>
+            <p>Haute École de la Province de Liège - Seraing</p>
+            <p>Deuxième année de mon bachelier en techniques infographiques
+                Acquisitions des compétences : MySQL, Javascript, PHP, Wordpress, Typescript</p>
+            <a href="">Lire la suite</a>
+            <!--Pop-up-->
+            <!--background-image-->
+        </div>
+        <!--Animation cercle-->
+    </section>
+    <section id="comment">
+        <h2 aria-level="2" role="heading">
+            Ils m'ont fait confiance&nbsp;!
+        </h2>
+        <!--Logo-->
+        <p>Plusieurs avis sur mon travail&nbsp;:</p>
+        <div>
+            <a href="" title="Vers le site ..."><img src="./img/" alt="Logo d'Amazon" width="300"
+                                                     height="300"></a>
+            <a href="" title="Vers le site ..."><img src="./img/" alt="Logo Blizzard" width="300"
+                                                     height="150"></a>
+            <a href="" title="Vers le site ..."><img src="./img/" alt="Logo Arenanet" width="300"
+                                                     height="300"></a>
+            <!--Slider-->
+        </div>
+        <!--Animation cercle-->
+    </section>
+    <section id="contact">
+        <h2 aria-level="2" role="heading">
+            Contactez-moi&nbsp;!
+        </h2>
+        <!--Logo-->
+        <p>Les champs &#42; sont obligatoires&nbsp;!</p>
+        <form id="form" action="" method="post">
+            <div>
+                <label for="name">
+                    Nom complet&nbsp&nbsp;: &#42;
+                </label>
+                <input id="name" type="text" name="name" placeholder="Quentin Lequeux">
+            </div>
+            <div>
+                <label for="email">
+                    Adresse email&nbsp&nbsp;: &#42;
+                </label>
+                <input id="email" type="email" name="email" placeholder="exemple@exemple.com">
+            </div>
+            <div>
+                <label for="message">
+                    Message&nbsp&nbsp;: &#42;
+                </label>
+                <textarea name="message" id="message" cols="30" rows="10"
+                          placeholder="Ecrivez votre message ici"></textarea>
+            </div>
+            <div>
+                <button type="submit">
+                    Envoyer
+                </button>
+            </div>
+        </form>
+        <!--Animation cercle-->
+    </section>
+</main>
+<footer>
+    <section id="footer">
+        <h2 aria-level="2" role="heading">
+            Footer
+        </h2>
+        <div class="links-top">
+            <a href="https://www.alsacreations.com/" title="Vers le site Alsacréations">Alsacréations</a>
+            <a href="https://css-tricks.com/" title="Vers le site du CSS-Tricks">CSS-Tricks</a>
+            <a href="https://caniuse.com/" title="Vers le site Can I Use">Can I Use</a>
+            <a href="https://codepen.io/" title="Vers le site CodePen">CodePen</a>
+        </div>
+        <div>
+            <a href="" title="Vers la page LinkedIn de Quentin Lequeux">LinkedIn</a>
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M20.532 40.5H26.5447L26.5477 24.0008L32.0089 23.9992L32.5935 18.3111H26.5447L26.5522 15.4663C26.5522 13.9831 26.6499 13.1881 28.7178 13.1881H32.5394V7.5H27.0617C21.7493 7.5 20.5245 10.3253 20.5245 14.9629L20.532 18.3111L16.5 18.3142V24.0008H20.532V40.5Z"
+                      fill="white"></path>
+            </svg>
+            <a href="https://github.com/QuentinLequeux" title="Vers le profil GitHub de Quentin Lequeux">GitHub</a>
+            <a href="" title="Vers la page Facebook de Quentin Lequeux">Facebook</a>
+            <a href="" title="Vers le profil Behance de Quentin Lequeux">Behance</a>
+        </div>
+        <div>
+            <a href="https://www.hepl.be/fr" title="Vers le site web de la Haute Ecole de la Province de Liège"><img
+                    src="" alt="Logo de la Haute Ecole de la Province de Liège"></a>
+            <a href="https://www.provincedeliege.be/" title="Vers le site web de la Province de Liège"><img src=""
+                                                                                                            alt="Logo de la Province de Liège"></a>
+        </div>
+        <div>
+            <p>
+                &#169; 2024 Lequeux Quentin. Tous droits réservés. Crée par Quentin Lequeux.
+            </p>
+        </div>
+        <div>
+            <span>Français</span> <!--Dropdown (Anglais)-->
+        </div>
+        <div>
+            <a href="https://www.jetbrains.com/fr-fr/phpstorm/" title="Vers le site de PhpStorm"><img src=""
+                                                                                                      alt="Icône PhpStorm"></a>
+            <a href="" title="Vers le site d'Adobe Xd"><img src="" alt="Icône Adobe Xd"></a>
+            <a href="" title="Vers le site d'Adobe Illustrator"><img src="" alt="Icône Adobe Illustrator"></a>
+            <a href="" title="Vers le site Firefox"><img src="" alt="Icône Mozilla Firefox"></a>
+            <a href="" title="Vers le site GitHub"><img src="" alt="Icône GitHub"></a>
+        </div>
+        <div class="links-bottom">
+            <a href="https://gtmetrix.com/" title="Vers le site de GTmetrix">GTmetrix</a>
+            <a href="https://schema.org/" title="Vers le site de Schema.org">Schema.org</a>
+            <a href="https://autoprefixer.github.io/" title="Vers le site de Autoprefixer">Autoprefixer</a>
+            <a href="https://dribbble.com/" title="Vers le site de Dribbble">Dribbble</a>
+        </div>
+        <!--Background-color : Noir-->
+    </section>
+</footer>
+</body>
+<!--<script src="index.js"></script>-->
 </html>
