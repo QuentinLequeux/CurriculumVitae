@@ -8,7 +8,7 @@
     <meta name="description"
           content="Site internet mettant en évidence les compétences, l'expérience et le parcours scolaire de Quentin Lequeux, développeur web et étudiant à la Haute Ecole de la Province de Liège">
     <meta name="keywords" content="HTML, CSS, Javascript, SQL, Web, student, Quentin Lequeux, Quentin, Lequeux, HEPL, design, développeur, CV, PHP,
-    TypeScript, infographie, développeur web, étudiant">
+    TypeScript, infographie, développeur web, étudiant, full-stack, front-end, back-end">
     <title>CV Développeur Web - Quentin Lequeux</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/lcq5nch.css">
@@ -24,13 +24,14 @@
         </h2>
         <!--<a href="#">Quentin&nbsp;Lequeux</a>-->
         <ul class="nav">
-            <li class="dropdown">A&nbsp;propos
-                <ul class="dropdown-content">
-                    <li><a href="#about" title="Vers la section coordonnées">Coordonnées</a></li>
-                    <li><a href="#skills" title="Vers la section compétences">Compétences</a></li>
-                    <li><a href="#projects" title="Vers la section réalisations">Réalisations</a></li>
-                    <li><a href="#news" title="Vers la section actualités">Actualités</a></li>
-                </ul>
+            <li class="dropdown">
+                <a class="dropbtn">A&nbsp&nbsp;propos</a>
+                <div class="dropdown-content">
+                    <a href="#about" title="Vers la section coordonnées">Coordonnées</a>
+                    <a href="#skills" title="Vers la section compétences">Compétences</a>
+                    <a href="#projects" title="Vers la section réalisations">Réalisations</a>
+                    <a href="#news" title="Vers la section actualités">Actualités</a>
+                </div>
             </li>
             <li><a href="#hobbies" title="Vers la section loisirs">Loisirs</a></li>
             <li><a href="#exp" title="Vers la section expériences">Expériences</a></li>
@@ -273,38 +274,40 @@
         <!--Animation cercle-->
     </section>
     <section id="contact">
-        <h2 aria-level="2" role="heading">
-            Contactez-moi&nbsp;!
-        </h2>
-        <!--Logo-->
-        <p>Les champs &#42; sont obligatoires&nbsp;!</p>
-        <form id="form" action="" method="post">
-            <div>
-                <label for="name">
-                    Nom complet&nbsp&nbsp;: &#42;
-                </label>
-                <input id="name" type="text" name="name" placeholder="Quentin Lequeux">
-            </div>
-            <div>
-                <label for="email">
-                    Adresse email&nbsp&nbsp;: &#42;
-                </label>
-                <input id="email" type="email" name="email" placeholder="exemple@exemple.com">
-            </div>
-            <div>
-                <label for="message">
-                    Message&nbsp&nbsp;: &#42;
-                </label>
-                <textarea name="message" id="message" cols="30" rows="10"
-                          placeholder="Ecrivez votre message ici"></textarea>
-            </div>
-            <div>
-                <button type="submit">
-                    Envoyer
-                </button>
-            </div>
-        </form>
-        <!--Animation cercle-->
+        <div class="form">
+            <h2 aria-level="2" role="heading">
+                Contactez-moi&nbsp;!
+            </h2>
+            <!--Logo-->
+            <p>Les champs &#42; sont obligatoires&nbsp;!</p>
+            <form id="form" action="" method="post">
+                <div>
+                    <label for="name">
+                        Nom complet&nbsp&nbsp;: &#42;
+                    </label>
+                    <input class="input-name" id="name" type="text" name="name" placeholder="Quentin Lequeux">
+                </div>
+                <div>
+                    <label for="email">
+                        Adresse email&nbsp&nbsp;: &#42;
+                    </label>
+                    <input id="email" type="email" name="email" placeholder="exemple@exemple.com">
+                </div>
+                <div>
+                    <label for="message">
+                        Message&nbsp&nbsp;: &#42;
+                    </label>
+                    <textarea name="message" id="message" cols="30" rows="10"
+                              placeholder="Ecrivez votre message ici"></textarea>
+                </div>
+                <div>
+                    <button type="submit">
+                        Envoyer
+                    </button>
+                </div>
+            </form>
+            <!--Animation cercle-->
+        </div>
     </section>
 </main>
 <footer>
