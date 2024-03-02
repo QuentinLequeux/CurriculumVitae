@@ -35,6 +35,14 @@ body {
     color: red;
 }
 
+.dropdown {
+
+}
+
+.dropdown-content {
+
+}
+
 #sidebar {
     position: fixed;
     display: flex;
