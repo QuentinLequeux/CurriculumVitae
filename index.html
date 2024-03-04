@@ -60,13 +60,15 @@
             </h2>
             <!--Logo-->
             <p itemprop="JobTitle">Développeur Web</p>
-            <p>Je m'appelle Quentin Lequeux, je suis <span itemprop="nationality">belge</span> et actuellement étudiant à l'<abbr
+            <p class="description">Je m'appelle Quentin Lequeux, je suis <span itemprop="nationality">belge</span> et actuellement étudiant à l'<abbr
                     title="Haute Ecole de la Province de Liège">HEPL</abbr>. Né le
                 <time itemprop="birthDate" datetime="1995-12-05">5 décembre 1995</time>
                 , j'habite dans la région de Namur.
             </p>
-            <a href="#projects" title="Vers mon portfolio">Découvrez-moi&nbsp&nbsp;!</a>
-            <a href="#contact" title="Vers mon formulaire de contact">Contactez-moi&nbsp&nbsp;!</a>
+            <div class="buttons">
+                <a href="#projects" title="Vers mon portfolio">Découvrez-moi&nbsp&nbsp;!</a>
+                <a href="#contact" title="Vers mon formulaire de contact">Contactez-moi&nbsp&nbsp;!</a>
+            </div>
             <!--backround-image-->
             <!--Animation cercle-->
         </div>
@@ -116,21 +118,35 @@
                 Mes réalisations
             </h2>
             <!--Logo-->
-            <div>
-                <img src="./img/" width="304" height="176" alt="">
-                <span itemprop="workExample">SiteCV</span>
-            </div>
-            <div>
-                <img src="./img/" width="304" height="176" alt="">
-                <span itemprop="workExample">Portfolio</span>
-            </div>
-            <div>
-                <img src="./img/" width="304" height="176" alt="">
-                <span itemprop="workExample">Jiris</span>
-            </div>
-            <div>
-                <img src="./img/" width="304" height="176" alt="">
-                <span itemprop="workExample">Design d'applications</span>
+            <div class="projects-title">
+                <article class="title">
+                    <a href="#popup" class="btn1"><img src="./img/logo-alsa.png" width="380" height="212" alt=""></a>
+                    <h3 aria-level="3" role="heading">CV</h3>
+                    <div id="popup" class="popup">
+                        <a href="#projects" class="close">&times;</a>
+                        <div class="content-popup">
+                            <span>CV</span>
+                            <p>Lorem ipsum</p>
+                        </div>
+                        <!--<a href="#" class="close-popup"></a>-->
+                    </div>
+                    <!--
+                    <img src="./img/" width="304" height="176" alt="">
+                    <span itemprop="workExample">SiteCV</span>
+                    -->
+                </article>
+                <div>
+                    <img src="./img/logo-alsa.png" width="380" height="212" alt="">
+                    <span itemprop="workExample">Portfolio</span>
+                </div>
+                <div>
+                    <img src="./img/logo-alsa.png" width="380" height="212" alt="">
+                    <span itemprop="workExample">Jiris</span>
+                </div>
+                <div>
+                    <img src="./img/logo-alsa.png" width="380" height="212" alt="">
+                    <span itemprop="workExample">Design d'applications</span>
+                </div>
             </div>
             <!--Site client, 3D-->
             <!--Pop-up : 3 photos + Description + background-image + slider + Logo-->

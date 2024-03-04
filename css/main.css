@@ -89,11 +89,12 @@ li.dropdown {
     align-items: flex-end;
     right: 0;
     top: 40%;
+    z-index: 1;
 }
 
 #sidebar a {
     text-decoration: none;
-    color: white;
+    color: red;
 }
 
 #home {
@@ -103,13 +104,44 @@ li.dropdown {
 }
 
 .wrapper {
-    margin-left: 40%;
-    padding-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    font-size: 1.125em;
+    color: white;
+    min-width: 50%;
+
+    /*margin-left: 40%;
+    padding-top: 20%;*/
 }
+
+.description {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,.85)) drop-shadow(0 6px 28px rgba(0,0,0,.7));
+}
+
+/*
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+*/
+
+/*
 
 .wrapper h2 {
     margin-top: 0;
 }
+
+*/
 
 #home a {
     text-decoration: none;
@@ -135,6 +167,14 @@ li.dropdown {
     min-height: 100vh;
     background-image: url("/img/bckg2.jpg");
     background-size: cover;
+    position: relative;
+}
+
+.projects {
+    position: absolute;
+    top: 20%;
+    max-width: 50em;
+    left: 8.75em;
 }
 
 .projects span{
@@ -142,6 +182,76 @@ li.dropdown {
 }
 .projects h2 {
     color: white;
+    font-size: 3.5em;
+}
+
+.projects-title {
+    display: grid;
+    grid-template: repeat(2,1fr) /repeat(2, 1fr);
+    gap: 2.5em;
+}
+
+.title h3{
+    position: relative;
+    text-align: center;
+    color: red;
+    margin: 0;
+    top: 5em;
+    font-size: 2em;
+    text-shadow: 0 2px 24px rgba(0,0,0,.6);
+}
+
+.btn1 {
+    position: absolute;
+    display: inline-block;
+}
+
+.popup {
+    position: fixed;
+    /*text-align: center;*/
+    /*border-radius: 0.5em;*/
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    /*padding: 10%;*/
+    /*color: #000;*/
+    /*transform: translate(-50%, -50%);*/
+    background-color: rgba(0,0,0,1);
+    visibility: hidden;
+    /*opacity: 0;*/
+    /*transition: opacity .5s, visibility 0s linear .5s;*/
+    z-index: 1;
+    background-image: url("/img/bckg1.jpg");
+    background-size: cover;
+}
+
+.content-popup {
+    display: flex;
+    flex-direction: column;
+    min-width: 37.5em;
+    background: rgba(0,0,0,.7);
+    color: white;
+    position: absolute;
+    left: 6.25em;
+    bottom: 1.75em;
+}
+
+.close {
+    text-decoration: none;
+    position: absolute;
+    right: .5em;
+    top: .3em;
+    /*padding: 5px;*/
+    color: #fff;
+    /*transition: color .3s;*/
+    font-size: 4em;
+    /*line-height: 1.5;*/
+}
+
+.popup:target {
+    visibility: visible;
+    opacity: 1;
 }
 
 #news {
@@ -194,20 +304,23 @@ li.dropdown {
     min-height: 100vh;
 }
 
-.links-top {
+.links-top, .links-bottom {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-.links-top a {
+.links-top a, .links-bottom a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 600;
     text-transform: uppercase;
-    margin-left: 32px;
+    margin-left: 2em;
     letter-spacing: .2em;
 }
+
+/*
 
 .links-bottom {
     display: flex;
@@ -224,3 +337,5 @@ li.dropdown {
     margin-left: 2em;
     letter-spacing: .2em;
 }
+
+*/
