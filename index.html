@@ -42,6 +42,8 @@
 </header>
 <main>
     <div id="sidebar">
+    </div>
+    <div class="hide">
         <a href="#home">Acceuil</a>
         <a href="#about">Coordonnées</a>
         <a href="#skills">Compétences</a>
@@ -54,63 +56,96 @@
         <a href="#footer">Footer</a>
     </div>
     <section id="home">
-        <div class="wrapper">
+        <div class="wrapper-home">
             <h2 aria-level="2" role="heading" itemprop="name">
                 Quentin Lequeux
             </h2>
             <!--Logo-->
             <p itemprop="JobTitle">Développeur Web</p>
-            <p class="description">Je m'appelle Quentin Lequeux, je suis <span itemprop="nationality">belge</span> et actuellement étudiant à l'<abbr
-                    title="Haute Ecole de la Province de Liège">HEPL</abbr>. Né le
+            <p class="description">Je m'appelle Quentin Lequeux, je suis <span itemprop="nationality">belge</span> et
+                actuellement étudiant à l'<abbr
+                        title="Haute Ecole de la Province de Liège">HEPL</abbr>. Né le
                 <time itemprop="birthDate" datetime="1995-12-05">5 décembre 1995</time>
                 , j'habite dans la région de Namur.
             </p>
             <div class="buttons">
-                <a href="#projects" title="Vers mon portfolio">Découvrez-moi&nbsp&nbsp;!</a>
-                <a href="#contact" title="Vers mon formulaire de contact">Contactez-moi&nbsp&nbsp;!</a>
+                <div class="trapezoid">
+                    <a href="#projects" title="Vers mon portfolio">Découvrez-moi&nbsp&nbsp;!</a>
+                </div>
+                <div class="trapezoid">
+                    <a href="#contact" title="Vers mon formulaire de contact">Contactez-moi&nbsp&nbsp;!</a>
+                </div>
             </div>
             <!--backround-image-->
             <!--Animation cercle-->
         </div>
     </section>
     <section id="about">
-        <h2 aria-level="2" role="heading">
-            A propos de moi
-        </h2>
-        <!--Logo-->
-        <aside>
-            <h3 aria-level="3" role="heading">
-                Coordonnées
-            </h3>
-            <p>Numéro de téléphone&nbsp&nbsp;:</p>
-            <span itemprop="telephone"><a href="" title="Appeler ce numéro">+32(0)473644221</a></span>
-            <p>Adresse email&nbsp&nbsp;:</p>
-            <span itemprop="email"><a href="" title="Envoyer un email à cette adresse">quent789@gmail.com</a></span>
-            <p>Adresse postale&nbsp&nbsp;:</p>
-            <a href="" title="Ouvrir dans Google Maps" itemscope itemtype="https://schema.org/PostalAddress"
-               itemprop="address"><span itemprop="streetAddress" title="">Rue de la brasserie 12b</span>, <span
-                    itemprop="postalCode">5080</span> <span itemprop="addressLocality">Warisoulx</span> <span
-                    itemprop="addressCountry">Belgique</span></a>
-        </aside>
-        <img src="" alt="Deux photos de moi avant et après"> <!--Avant/Après-->
-        <!--Animation cercle-->
+        <div class="wrapper-about">
+            <h2 aria-level="2" role="heading">
+                A propos de moi
+            </h2>
+            <!--Logo-->
+            <aside class="content-about">
+                <h3 aria-level="3" role="heading">
+                    Coordonnées
+                </h3>
+                <p>Numéro de téléphone&nbsp&nbsp;:</p>
+                <span itemprop="telephone"><a href="" title="Appeler ce numéro">+32(0)473644221</a></span>
+                <p>Adresse email&nbsp&nbsp;:</p>
+                <span itemprop="email"><a href="" title="Envoyer un email à cette adresse">quent789@gmail.com</a></span>
+                <p>Adresse postale&nbsp&nbsp;:</p>
+                <a href="" title="Ouvrir dans Google Maps" itemscope itemtype="https://schema.org/PostalAddress"
+                   itemprop="address"><span itemprop="streetAddress" title="">Rue de la brasserie 12b</span>, <span
+                        itemprop="postalCode">5080</span> <span itemprop="addressLocality">Warisoulx</span> <span
+                        itemprop="addressCountry">Belgique</span></a>
+            </aside>
+            <!--
+            <div class="img-container">
+                <div class="img-slider">
+                    <img src="./img/avant.jpeg" alt="Photo avant" width="1080" height="608">
+                </div>
+                <div class="img-slider front">
+                    <img src="./img/apres.jpg" alt="Photo après" width="1080" height="608">
+                </div>
+            </div>
+            <!--Animation cercle-->
+        </div>
     </section>
     <section id="skills" itemscope itemtype="https://schema.org/Occupation" itemprop="hasOccupation">
-        <h2 aria-level="2" role="heading">
-            Mes compétences
-        </h2>
-        <!--Logo-->
-        <div>
-            <span itemprop="skills">HTML</span>
+        <div class="wrapper-skills">
+            <h2 aria-level="2" role="heading">
+                Mes compétences
+            </h2>
+            <!--Logo-->
+            <div class="slider">
+                <div id="arrow-left" class="arrow"></div>
+                <div class="slider-content">
+                    <div class="slide slide1">
+                        <!--<img src="./img/html.jpg" alt="HTML5" width="720" height="402">-->
+                    </div>
+                    <div class="slide slide2">
+                        <!--<img src="./img/css.jpg" alt="CSS3" width="720" height="402">-->
+                    </div>
+                    <div class="slide slide3">
+                        <!--<img src="./img/php.jpg" alt="PHP" width="720" height="402">-->
+                    </div>
+                    <div class="slide slide4">
+                        <!--<img src="./img/fullstack.jpg" alt="Full-stack developer" width="720" height="402">-->
+                    </div>
+                </div>
+                <div id="arrow-right" class="arrow"></div>
+            </div>
+            <!--<span itemprop="skills">HTML</span>
             <span itemprop="skills">CSS</span>
             <span itemprop="skills">Javascript</span>
             <span itemprop="skills">MySQL</span>
             <span itemprop="skills">PHP</span>
             <span itemprop="skills">Typescript</span>
             <span itemprop="skills">Wordpress</span>
-        </div>
         <!--Slider(Photos)-->
-        <!--Animation cercle-->
+            <!--Animation cercle-->
+        </div>
     </section>
     <section id="projects" itemscope itemtype="https://schema.org/CreativeWork" itemprop="knowAbout">
         <div class="projects">
@@ -155,37 +190,44 @@
         </div>
     </section>
     <section id="news">
+        <h2 aria-level="2" role="heading">
+            Actualités
+        </h2>
         <div class="news">
-            <h2 aria-level="2" role="heading">
-                Actualités
-            </h2>
             <!--Logo-->
             <article>
-                <h3 aria-level="3" role="heading">
-                    Alsacréations : Optimiser le poids des SVG
-                </h3>
                 <a href="https://www.alsacreations.com/astuce/lire/1925-Optimiser-le-poids-des-images-SVG.html"
                    title="Vers le site Alsacréations">
-                    <img src="./img/logo-alsa.png" alt="Logo ...">
+                    <img src="./img/actu1.jpg" alt="Logo ..." width="520" height="290">
+                    <h3 aria-level="3" role="heading">
+                        Alsacréations : Optimiser le poids des SVG
+                    </h3>
                 </a>
             </article>
             <article>
-                <h3 aria-level="3" role="heading">
-                    Alsacréations : Animer un bouton burger simple avec SVG et CSS
-                </h3>
                 <a href="https://www.alsacreations.com/tuto/lire/1921-Animer-un-bouton-burger-simple-avec-SVG-et-CSS.html"
                    title="Vers le site du MDN">
-                    <img src="./img/logo-alsa.png" alt="Logo ...">
+                    <img src="./img/actu2.jpg" alt="Logo ..." width="520" height="290">
+                    <h3 aria-level="3" role="heading">
+                        Alsacréations : Animer un bouton burger simple avec SVG et CSS
+                    </h3>
                 </a>
             </article>
-            <ul>
-                <li><a href="" title="Vers le site Can I Use">?</a></li>
-                <li><a href="" title="Vers le site Codpen">?</a></li>
-                <li><a href="" title="Vers le site de Wes Bos">?</a></li>
-                <li><a href="" title="Vers le site Autoprefixer">?</a></li>
-                <a href="">Voir plus d'actualités</a> <!--Autre page ?-->
-            </ul>
+            <div class="news-content">
+                <ul>
+                    <li><a href="https://www.alsacreations.com/article/lire/1915-Les-Container-Queries-en-CSS.html"
+                           title="Vers le site Alsacréations">Les Container Querries en CSS</a></li>
+                    <li><a href="https://www.alsacreations.com/astuce/lire/1892-La-propriete-image-rendering-en-CSS.html"
+                           title="Vers le site Alsacréations">La propriété image-rendering en CSS</a></li>
+                    <li><a href="https://www.alsacreations.com/article/lire/1908-Les-citations-en-HTML-avec-blockquote-cite-et-q.html"
+                           title="Vers le site Alsacréations">Les citations en HTML avec blockquote, cite et q</a></li>
+                    <li><a href="https://www.alsacreations.com/article/lire/1903-Qu-est-ce-que-Vite.html"
+                           title="Vers le site Alsacréations">Qu'est-ce que Vite ?</a></li>
+                </ul>
+                <a href="https://www.alsacreations.com/home/0" title="">Voir plus d'actualités</a> <!--Autre page ?-->
+            </div>
             <!--Animation cercle-->
+            <!--Media querries-->
         </div>
     </section>
     <section id="hobbies">
@@ -211,81 +253,99 @@
             Mon parcours
         </h2>
         <!--Logo-->
-        <a href="">Formations</a>
-        <a href="">Parcours</a> <!--Photos représentant la formation-->
-        <div>
-            <p>2014-2015</p>
-            <p>7ème - CESS</p>
-            <p itemprop="alumniOf">Institut d’enseignement des arts techniques sciences et artisanats - Namur</p>
-            <p>Année d'obtention de mon <abbr title="Certificat d'enseignement secondaire supérieur">CESS</abbr> à
-                l'Institut d’enseignement des arts techniques sciences et artisanats à Namur,
-                option création et restauration de meubles. Ainsi que mon diplôme de gestion de base.</p>
-            <a href="">Lire la suite</a>
-            <!--background-image-->
-            <!--Pop-up-->
+        <div class="exp-links">
+            <a href="#exp">Formations</a>
+            <a href="#exp">Parcours</a> <!--Photos représentant la formation-->
         </div>
-        <div>
-            <p>2018-2019</p>
-            <p>7ème Assistant Métiers de la Prévention et de la Sécurité</p>
-            <p itemprop="alumniOf">Institut Provincial d'Enseignement Supérieur - Seilles</p>
-            <p>Obtention de mon attestation de gardiennage, gardien de la paix et steward football ainsi que plusieurs
-                formations telles que
-                l'EPI (Equipier Première Intervention) et secourisme industriel.</p>
-            <a href="">Lire la suite</a>
-            <!--background-image-->
-            <!--Pop-up-->
-        </div>
-        <div>
-            <p>2019-2022</p>
-            <p itemprop="jobTitle">Agent de sécurité</p>
-            <p itemprop="workLocation">Université du Luxembourg - Belval</p>
-            <p>Juillet 2019 à Janvier 2022
-                Agent de sécurité à l'Université du Luxembourg (Belval) pour la société <span itemprop="worksFor">Dussmann Security</span>.
-                J'ai effectué des tâches tels que la
-                réception, contrôle d'accès, surveillance caméra, gestion de logiciel intrusion,...</p>
-            <a href="">Lire la suite</a>
-            <!--background-image-->
-            <!--Pop-up-->
-        </div>
-        <div>
-            <p>2022-2023</p>
-            <p>Bachelier Techniques Infographiques</p>
-            <p itemprop="alumniOf">Haute École de la Province de Liège - Seraing</p>
-            <p itemscope itemtype="https://schema.org/Occupation" itemprop="hasOccupation">Première année de mon
-                bachelier en techniques infographiques.
-                Acquisitions de multiples compétences : HTML, CSS, Suite Adobe(<span itemprop="skills">Photoshop</span>,
-                <span>Illustrator</span>, <span>Premiere</span>, <span>Xd</span>) <span>Maya</span>,
-                <span>Typographie</span></p>
-            <a href="">Lire la suite</a>
-            <!--background-image-->
-            <!--Pop-up-->
-        </div>
-        <div>
-            <p>2023-2024</p>
-            <p>Bachelier Techniques Infographiques option Web</p>
-            <p>Haute École de la Province de Liège - Seraing</p>
-            <p>Deuxième année de mon bachelier en techniques infographiques
-                Acquisitions des compétences : MySQL, Javascript, PHP, Wordpress, Typescript</p>
-            <a href="">Lire la suite</a>
-            <!--Pop-up-->
-            <!--background-image-->
+        <div class="timeline">
+            <div>
+                <p class="">2014-2015</p>
+                <p class="">7ème - CESS</p>
+                <p class="" itemprop="alumniOf">Institut d’enseignement des arts techniques sciences et artisanats - Namur</p>
+                <div class="status">
+                </div>
+                <p>Année d'obtention de mon <abbr title="Certificat d'enseignement secondaire supérieur">CESS</abbr> à
+                    l'Institut d’enseignement des arts techniques sciences et artisanats à Namur,
+                    option création et restauration de meubles. Ainsi que mon diplôme de gestion de base.</p>
+                <a href="">Lire la suite</a>
+                <!--background-image-->
+                <!--Pop-up-->
+            </div>
+            <div>
+                <p>2018-2019</p>
+                <p>7ème Assistant Métiers de la Prévention et de la Sécurité</p>
+                <p itemprop="alumniOf">Institut Provincial d'Enseignement Supérieur - Seilles</p>
+                <div class="status">
+                </div>
+                <p>Obtention de mon attestation de gardiennage, gardien de la paix et steward football ainsi que plusieurs
+                    formations telles que
+                    l'EPI (Equipier Première Intervention) et secourisme industriel.</p>
+                <a href="">Lire la suite</a>
+                <!--background-image-->
+                <!--Pop-up-->
+            </div>
+            <div>
+                <p>2019-2022</p>
+                <p itemprop="jobTitle">Agent de sécurité</p>
+                <p itemprop="workLocation">Université du Luxembourg - Belval</p>
+                <div class="status">
+                </div>
+                <p>Juillet 2019 à Janvier 2022
+                    Agent de sécurité à l'Université du Luxembourg (Belval) pour la société <span itemprop="worksFor">Dussmann Security</span>.
+                    J'ai effectué des tâches tels que la
+                    réception, contrôle d'accès, surveillance caméra, gestion de logiciel intrusion,...</p>
+                <a href="">Lire la suite</a>
+                <!--background-image-->
+                <!--Pop-up-->
+            </div>
+            <div>
+                <p>2022-2023</p>
+                <p>Bachelier Techniques Infographiques</p>
+                <p itemprop="alumniOf">Haute École de la Province de Liège - Seraing</p>
+                <div class="status">
+                </div>
+                <p itemscope itemtype="https://schema.org/Occupation" itemprop="hasOccupation">Première année de mon
+                    bachelier en techniques infographiques.
+                    Acquisitions de multiples compétences : HTML, CSS, Suite Adobe(<span itemprop="skills">Photoshop</span>,
+                    <span>Illustrator</span>, <span>Premiere</span>, <span>Xd</span>) <span>Maya</span>,
+                    <span>Typographie</span></p>
+                <a href="">Lire la suite</a>
+                <!--background-image-->
+                <!--Pop-up-->
+            </div>
+            <div>
+                <p>2023-2024</p>
+                <p>Bachelier Techniques Infographiques option Web</p>
+                <p>Haute École de la Province de Liège - Seraing</p>
+                <div class="status">
+                </div>
+                <p>Deuxième année de mon bachelier en techniques infographiques
+                    Acquisitions des compétences : MySQL, Javascript, PHP, Wordpress, Typescript</p>
+                <a href="">Lire la suite</a>
+                <!--Pop-up-->
+                <!--background-image-->
+            </div>
         </div>
         <!--Animation cercle-->
     </section>
     <section id="comment">
-        <h2 aria-level="2" role="heading">
-            Ils m'ont fait confiance&nbsp;!
-        </h2>
-        <!--Logo-->
-        <p>Plusieurs avis sur mon travail&nbsp;:</p>
-        <div>
-            <a href="" title="Vers le site ..."><img src="./img/" alt="Logo d'Amazon" width="300"
-                                                     height="300"></a>
-            <a href="" title="Vers le site ..."><img src="./img/" alt="Logo Blizzard" width="300"
-                                                     height="150"></a>
-            <a href="" title="Vers le site ..."><img src="./img/" alt="Logo Arenanet" width="300"
-                                                     height="300"></a>
-            <!--Slider-->
+        <div class="wrapper-comment">
+            <div class="comment-title">
+                <h2 aria-level="2" role="heading">
+                    Ils m'ont fait confiance&nbsp;!
+                </h2>
+                <!--Logo-->
+                <p>Plusieurs avis sur mon travail&nbsp;:</p>
+            </div>
+            <div class="comment-image">
+                <a href="#comment" title="Vers le site ..."><img src="./img/logo1.jpg" alt="Logo" width="300"
+                                                         height="300"></a>
+                <a href="#comment" title="Vers le site ..."><img src="./img/logo2.jpeg" alt="Logo" width="300"
+                                                         height="300"></a>
+                <a href="#comment" title="Vers le site ..."><img src="./img/logo3.jpg" alt="Logo" width="300"
+                                                         height="300"></a>
+                <!--Slider-->
+            </div>
         </div>
         <!--Animation cercle-->
     </section>
@@ -363,8 +423,7 @@
             <span>Français</span> <!--Dropdown (Anglais)-->
         </div>
         <div>
-            <a href="https://www.jetbrains.com/fr-fr/phpstorm/" title="Vers le site de PhpStorm"><img src=""
-                                                                                                      alt="Icône PhpStorm"></a>
+            <a href="https://www.jetbrains.com/fr-fr/phpstorm/" title="Vers le site de PhpStorm"></a>
             <a href="" title="Vers le site d'Adobe Xd"><img src="" alt="Icône Adobe Xd"></a>
             <a href="" title="Vers le site d'Adobe Illustrator"><img src="" alt="Icône Adobe Illustrator"></a>
             <a href="" title="Vers le site Firefox"><img src="" alt="Icône Mozilla Firefox"></a>
@@ -380,5 +439,5 @@
     </section>
 </footer>
 </body>
-<!--<script src="index.js"></script>-->
+<script src="js/main.js"></script>
 </html>

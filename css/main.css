@@ -83,18 +83,42 @@ li.dropdown {
 }
 
 #sidebar {
+    display: block;
     position: fixed;
+    /*
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    */
     right: 0;
-    top: 40%;
+    top: 30%;
     z-index: 1;
+    background-color: rgba(0,0,0,.2);
+    height: 50%;
+    width: 50px;
 }
 
 #sidebar a {
     text-decoration: none;
     color: red;
+}
+
+.hide {
+    display: none;
+}
+
+#sidebar:hover + .hide {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 30%;
+    z-index: 1;
+    background-color: rgba(0,0,0,.2);
+    height: 50%;
+}
+
+.hide a {
+    display: flex;
 }
 
 #home {
@@ -103,7 +127,7 @@ li.dropdown {
     background-size: cover;
 }
 
-.wrapper {
+.wrapper-home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,9 +138,9 @@ li.dropdown {
     font-size: 1.125em;
     color: white;
     min-width: 50%;
+    margin-left: 40%;
 
-    /*margin-left: 40%;
-    padding-top: 20%;*/
+    /*padding-top: 20%;*/
 }
 
 .description {
@@ -126,14 +150,39 @@ li.dropdown {
     filter: drop-shadow(0 1px 4px rgba(0,0,0,.85)) drop-shadow(0 6px 28px rgba(0,0,0,.7));
 }
 
-/*
+.trapezoid {
+        width: 220px;
+        text-align: center;
+        height: 0;
+        position: relative;
+        border-right: 50px solid transparent;
+        border-top: 40px solid #fff;
+        border-left: 50px solid transparent;
+        box-sizing: content-box;
+        /*box-shadow: inset 0 0 10px #000;*/
+        /*box-shadow: 0 20px 32px rgba(63, 101, 97,.5);*/
+}
+
+.trapezoid a {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    top: -33px;
+    left: 15%;
+    color: red;
+}
+
+.trapezoid a[href="#contact"] {
+    color: black;
+}
 
 .buttons {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    gap: 2em 1em;
 }
-
-*/
 
 /*
 
@@ -147,20 +196,45 @@ li.dropdown {
     text-decoration: none;
 }
 
+/*
+
 #home a:first-of-type {
     color: red;
 }
+
+*/
+
+/*
 
 #home a:last-of-type {
     color: white;
 }
 
+*/
+
 #about {
     min-height: 100vh;
 }
 
+.wrapper-about {
+    display: flex;
+    padding-top: 10vh;
+    margin: 0 10em 0 10em;
+}
+
+.content-about {
+    max-width: 520px;
+}
+
 #skills {
     min-height: 100vh;
+}
+
+.wrapper-skills {
+    display: flex;
+    position: relative;
+    top: 30vh;
+    margin-left: 8.75em;
 }
 
 #projects {
@@ -259,11 +333,54 @@ li.dropdown {
 }
 
 .news {
-    max-width: 1500px;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20vh;
+    gap: 2.5em;
 }
-.news h2 {
+#news h2 {
     text-align: center;
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.news-content {
+    background: rgba(0,0,0,.05);
+    padding: 2em;
+    list-style-type: square;
+}
+
+.news-content a:hover {
+    color: red;
+}
+
+.news-content a {
+    color: black;
+    font-size: 1.25em;
+}
+
+.news article a {
+    text-decoration: none;
+    font-size: 2em;
+    color: black;
+    font-weight: 700;
+}
+
+.news article a img {
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,.2));
+    box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.news article a h3 {
+    margin: 0;
+    max-width: 520px;
+}
+
+.news article a:hover {
+    color: red;
 }
 
 #hobbies {
@@ -274,8 +391,108 @@ li.dropdown {
     min-height: 100vh;
 }
 
+#exp h2 {
+    font-size: 2rem;
+    margin: 0 8.75rem;
+    padding-top: 8.75rem;
+}
+
+.exp-links {
+    margin: 1.125rem 8.75rem;
+}
+
+.exp-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.exp-links a:hover {
+    color: red;
+}
+
+.exp-links a:active::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    bottom: -4px;
+}
+
+.exp-links a:last-child {
+    margin-left: 2rem;
+}
+
+.timeline {
+    display: flex;
+    padding: 0 8.75em;
+    align-items: flex-end;
+}
+
+.timeline a {
+    color: black;
+}
+
+.timeline p {
+    text-align: left;
+}
+
+.status {
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    border-top: 4px solid black;
+    position: relative;
+}
+
+.status:before {
+    background-color: white;
+    content: "";
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+    border: 4px solid black;
+    position: absolute;
+    top: -8px;
+    left: 0;
+}
+
 #comment {
     min-height: 100vh;
+}
+
+.wrapper-comment {
+    display: flex;
+    gap: 2.5em;
+    position: relative;
+    top: 20vh;
+    margin-left: 8.75em;
+}
+
+.wrapper-comment a {
+    margin-right: 40px;
+}
+
+.comment-image {
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,.24)) drop-shadow(0 8px 32px rgba(0,0,0,.3));
+}
+
+.comment-title {
+
+}
+
+.comment-title h2{
+    font-size: 3.5em;
+}
+
+.comment-title p {
+    font-size: 1.125em;
 }
 
 #contact {
