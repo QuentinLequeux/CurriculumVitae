@@ -16,13 +16,12 @@
 <body itemscope itemtype="https://schema.org/Person">
 <header>
     <h1 aria-level="1" role="heading" class="hidden">
-        CV Quentin Lequeux
+        CV de Quentin Lequeux
     </h1>
     <nav class="menu">
         <h2 class="hidden" aria-level="2" role="heading">
             Navigation principale
         </h2>
-        <!--<a href="#">Quentin&nbsp;Lequeux</a>-->
         <ul class="nav">
             <li class="dropdown">
                 <a class="dropbtn">A&nbsp;propos</a>
@@ -62,7 +61,7 @@
                 Quentin Lequeux
             </h2>
             <!--Logo-->
-            <p itemprop="JobTitle">Développeur Web</p>
+            <p class="job" itemprop="JobTitle">Développeur Web</p>
             <p class="description">Je m'appelle Quentin Lequeux, je suis <span itemprop="nationality">belge</span> et
                 actuellement étudiant à l'<abbr
                         title="Haute Ecole de la Province de Liège">HEPL</abbr>. Né le
@@ -71,19 +70,18 @@
             </p>
             <div class="buttons">
                 <div class="trapezoid">
-                    <a href="#projects" title="Vers mon portfolio">Découvrez-moi&nbsp&nbsp;!</a>
+                    <a href="#projects" title="Vers mon portfolio">Découvrez-moi&nbsp;!</a>
                 </div>
                 <div class="trapezoid">
-                    <a href="#contact" title="Vers mon formulaire de contact">Contactez-moi&nbsp&nbsp;!</a>
+                    <a href="#contact" title="Vers mon formulaire de contact">Contactez-moi&nbsp;!</a>
                 </div>
             </div>
-            <!--backround-image-->
             <!--Animation cercle-->
         </div>
     </section>
     <section id="about">
         <div class="wrapper-about">
-            <h2 aria-level="2" role="heading">
+            <h2 aria-level="2" role="heading" class="hidden">
                 A propos de moi
             </h2>
             <!--Logo-->
@@ -91,20 +89,21 @@
                 <h3 aria-level="3" role="heading">
                     Coordonnées
                 </h3>
-                <p>Numéro de téléphone&nbsp&nbsp;:</p>
+                <p>Numéro de téléphone&nbsp;:</p>
                 <span itemprop="telephone"><a href="" title="Appeler ce numéro">+32(0)473644221</a></span>
-                <p>Adresse email&nbsp&nbsp;:</p>
+                <p>Adresse email&nbsp;:</p>
                 <span itemprop="email"><a href="" title="Envoyer un email à cette adresse">quent789@gmail.com</a></span>
-                <p>Adresse postale&nbsp&nbsp;:</p>
-                <a href="" title="Ouvrir dans Google Maps" itemscope itemtype="https://schema.org/PostalAddress"
+                <p>Adresse postale&nbsp;:</p>
+                <a href="https://www.google.com/maps/@50.536599,4.8562688,15z?entry=ttu" title="Ouvrir dans Google Maps"
+                   itemscope itemtype="https://schema.org/PostalAddress"
                    itemprop="address"><span itemprop="streetAddress" title="">Rue de la brasserie 12b</span>, <span
                         itemprop="postalCode">5080</span> <span itemprop="addressLocality">Warisoulx</span> <span
                         itemprop="addressCountry">Belgique</span></a>
             </aside>
             <div class="image-comparaison">
                 <div class="image-container">
-                    <img class="before" src="img/avant.jpeg" alt="" width="600">
-                    <img class="after" src="img/apres.jpg" alt="" width="600">
+                    <img class="before" src="img/avant.jpeg" alt="Mes compétences avant" width="600">
+                    <img class="after" src="img/apres.jpg" alt="Mes compétences après" width="600">
                     <div class="slider-line"></div>
                     <div class="slider-icon">
                         <svg
@@ -113,7 +112,6 @@
                                 viewBox="0 0 24 24"
                                 stroke-width="1.5"
                                 stroke="currentColor"
-                                class="w-6 h-6"
                         >
                             <path
                                     stroke-linecap="round"
@@ -122,37 +120,34 @@
                             />
                         </svg>
                     </div>
-
-                    <input type="range" class="slider" min="0" max="100" />
-                    </div>
+                    <input type="range" class="slider" min="0" max="100"/>
                 </div>
             </div>
-            <!--Animation cercle-->
         </div>
+        <!--Animation cercle-->
     </section>
     <section id="skills" itemscope itemtype="https://schema.org/Occupation" itemprop="hasOccupation">
         <div class="wrapper-skills">
-            <h2 aria-level="2" role="heading">
-                Mes compétences
-            </h2>
+            <div class="content-skills">
+                <img src="/img/hepl.png" alt="Logo de la Haute Ecole de la Province de Liège" width="150" height="80">
+                <h2 aria-level="2" role="heading">
+                    Mes compétences
+                </h2>
+                <p>Au cours de mon apprentissage, j'ai acquis plusieurs compétences. En voici quelques unes.</p>
+            </div>
             <!--Logo-->
-            <div class="slider-skills">
-                <div id="arrow-left" class="arrow"></div>
-                <div class="slider-content">
-                    <div class="slide slide1">
-                        <!--<img src="./img/html.jpg" alt="HTML5" width="720" height="402">-->
-                    </div>
-                    <div class="slide slide2">
-                        <!--<img src="./img/css.jpg" alt="CSS3" width="720" height="402">-->
-                    </div>
-                    <div class="slide slide3">
-                        <!--<img src="./img/php.jpg" alt="PHP" width="720" height="402">-->
-                    </div>
-                    <div class="slide slide4">
-                        <!--<img src="./img/fullstack.jpg" alt="Full-stack developer" width="720" height="402">-->
-                    </div>
+
+            <div class="slider-image">
+                <div class="slider-wrapper">
+                    <img src="/img/html.jpg" alt="">
+                    <img src="/img/css.jpg" alt="">
+                    <img src="/img/php.jpg" alt="">
+                    <img src="/img/fullstack.jpg" alt="">
                 </div>
-                <div id="arrow-right" class="arrow"></div>
+                <!--
+                <div class="left">&#9665;</div>
+                <div class="right">&#9655;</div>
+                -->
             </div>
             <!--<span itemprop="skills">HTML</span>
             <span itemprop="skills">CSS</span>
@@ -161,7 +156,7 @@
             <span itemprop="skills">PHP</span>
             <span itemprop="skills">Typescript</span>
             <span itemprop="skills">Wordpress</span>
-        <!--Slider(Photos)-->
+            Slider(Photos)-->
             <!--Animation cercle-->
         </div>
     </section>
@@ -216,7 +211,7 @@
             <article>
                 <a href="https://www.alsacreations.com/astuce/lire/1925-Optimiser-le-poids-des-images-SVG.html"
                    title="Vers le site Alsacréations">
-                    <img src="./img/actu1.jpg" alt="Logo ..." width="520" height="290">
+                    <img src="./img/actu1.jpg" alt="Image d'actualité" width="520" height="290">
                     <h3 aria-level="3" role="heading">
                         Alsacréations : Optimiser le poids des SVG
                     </h3>
@@ -225,7 +220,7 @@
             <article>
                 <a href="https://www.alsacreations.com/tuto/lire/1921-Animer-un-bouton-burger-simple-avec-SVG-et-CSS.html"
                    title="Vers le site du MDN">
-                    <img src="./img/actu2.jpg" alt="Logo ..." width="520" height="290">
+                    <img src="./img/actu2.jpg" alt="Image d'actualité" width="520" height="290">
                     <h3 aria-level="3" role="heading">
                         Alsacréations : Animer un bouton burger simple avec SVG et CSS
                     </h3>
@@ -234,20 +229,23 @@
             <div class="news-content">
                 <ul>
                     <li><a href="https://www.alsacreations.com/article/lire/1915-Les-Container-Queries-en-CSS.html"
+                           hreflang="fr"
                            title="Vers le site Alsacréations">Les Container Querries en CSS</a></li>
                     <li>
                         <a href="https://www.alsacreations.com/astuce/lire/1892-La-propriete-image-rendering-en-CSS.html"
+                           hreflang="fr"
                            title="Vers le site Alsacréations">La propriété image-rendering en CSS</a></li>
                     <li>
                         <a href="https://www.alsacreations.com/article/lire/1908-Les-citations-en-HTML-avec-blockquote-cite-et-q.html"
+                           hreflang="fr"
                            title="Vers le site Alsacréations">Les citations en HTML avec blockquote, cite et q</a></li>
                     <li><a href="https://www.alsacreations.com/article/lire/1903-Qu-est-ce-que-Vite.html"
+                           hreflang="fr"
                            title="Vers le site Alsacréations">Qu'est-ce que Vite ?</a></li>
                 </ul>
-                <a href="https://www.alsacreations.com/home/0" title="">Voir plus d'actualités</a> <!--Autre page ?-->
+                <a href="https://www.alsacreations.com/home/0" title="Vers le site Alsacréations">Voir plus d'actualités</a>
             </div>
             <!--Animation cercle-->
-            <!--Media querries-->
         </div>
     </section>
     <section id="hobbies">
@@ -418,19 +416,21 @@
         </div>
     </section>
 </main>
+<!-- Footer OK -->
 <footer>
     <section id="footer">
         <h2 aria-level="2" role="heading" class="hidden">
             Footer
         </h2>
         <div class="links-top">
-            <a href="https://www.alsacreations.com/" title="Vers le site Alsacréations">Alsacréations</a>
-            <a href="https://css-tricks.com/" title="Vers le site du CSS-Tricks">CSS-Tricks</a>
-            <a href="https://caniuse.com/" title="Vers le site Can I Use">Can I Use</a>
-            <a href="https://codepen.io/" title="Vers le site CodePen">CodePen</a>
+            <a href="https://www.alsacreations.com/" hreflang="en" title="Vers le site Alsacréations">Alsacréations</a>
+            <a href="https://css-tricks.com/" hreflang="en" title="Vers le site CSS-Tricks">CSS-Tricks</a>
+            <a href="https://caniuse.com/" hreflang="en" title="Vers le site Can I Use">Can I Use</a>
+            <a href="https://codepen.io/" hreflang="en" title="Vers le site CodePen">CodePen</a>
         </div>
         <div class="socials">
-            <a href="#footer" title="Vers la page LinkedIn de Quentin Lequeux">
+            <a href="https://lu.linkedin.com/in/quentin-lequeux-8a11a3192"
+               title="Vers la page LinkedIn de Quentin Lequeux">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
                           fill="white"></path>
@@ -457,36 +457,23 @@
             </a>
         </div>
         <div class="logos-top">
-            <a href="https://www.hepl.be/fr" title="Vers le site web de la Haute Ecole de la Province de Liège"><img
-                    src="" alt="Logo de la Haute Ecole de la Province de Liège"></a>
-            <a href="https://www.provincedeliege.be/" title="Vers le site web de la Province de Liège"><img src=""
+            <a href="https://www.hepl.be/fr" hreflang="fr" title="Vers le site web de la Haute Ecole de la Province de Liège"><img
+                    src="/img/hepl.png" alt="Logo de la Haute Ecole de la Province de Liège"></a>
+            <a href="https://www.provincedeliege.be/" hreflang="fr" title="Vers le site web de la Province de Liège"><img src="/img/liege.png"
                                                                                                             alt="Logo de la Province de Liège"></a>
         </div>
         <div class="copyright">
             <p>
-                &#169; 2024 Lequeux Quentin. Tous droits réservés. Crée par Quentin Lequeux.
+                &#169; 2024 Lequeux Quentin. Tous droits réservés. Créer par Quentin Lequeux.
             </p>
         </div>
         <div class="line"></div>
-        <!--
-        <div>
-            <span>Français</span> Dropdown (Anglais)
-        </div>
-        -->
         <div class="logos-bottom">
-            <a href="" title="Vers le site d'Adobe Photoshop">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            <a href="https://www.adobe.com/be_fr/products/photoshop.html" hreflang="fr"
+               title="Vers le site d'Adobe Photoshop">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                      width="48" y="48" viewBox="0 0 240 234"
                      style="enable-background:new 0 0 240 234;" xml:space="preserve">
-                    <style type="text/css">
-                        .st2 {
-                            fill: #001E36;
-                        }
-
-                        .st3 {
-                            fill: #31A8FF;
-                        }
-                    </style>
                     <g id="Layer_2_1_">
                         <g id="Surfaces">
                             <g id="Photo_Surface">
@@ -507,8 +494,8 @@
                     </g>
                 </svg>
             </a>
-            <a href="" title="Vers le site d'Adobe Xd">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            <a href="https://helpx.adobe.com/be_fr/xd/get-started.html" hreflang="fr" title="Vers le site d'Adobe Xd">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                      width="48" height="48" viewBox="0 0 240 234"
                      style="enable-background:new 0 0 240 234;" xml:space="preserve">
                     <style type="text/css">
@@ -540,7 +527,7 @@
                     </g>
                 </svg>
             </a>
-            <a href="" title="Vers le site d'Adobe Illustrator">
+            <a href="https://www.adobe.com/be_fr/products/illustrator.html" hreflang="fr" title="Vers le site d'Adobe Illustrator">
                 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="48" height="48"
                      viewBox="0 0 240 234">
                     <path fill="#300"
@@ -549,8 +536,8 @@
                           d="M116 140H78.8l-7.6 23.5c-.2.9-1 1.5-1.9 1.4H50.5c-1.1 0-1.4-.6-1.1-1.8l32.2-92.7c.3-1 .6-2.1 1-3.3.4-2.1.6-4.3.6-6.5-.1-.5.3-1 .8-1.1h25.9c.8 0 1.2.3 1.3.8l36.5 103c.3 1.1 0 1.6-1 1.6h-20.9c-.7.1-1.4-.4-1.6-1.1L116 140zm-31.4-20.3H110c-.6-2.1-1.4-4.6-2.3-7.2-.9-2.7-1.8-5.6-2.7-8.6-1-3.1-1.9-6.1-2.9-9.2s-1.9-6-2.7-8.9c-.8-2.8-1.5-5.4-2.2-7.8H97c-.9 4.3-2 8.6-3.4 12.9-1.5 4.8-3 9.8-4.6 14.8-1.4 5.1-2.9 9.8-4.4 14zM170 77c-3.3.1-6.5-1.2-8.9-3.5-2.3-2.5-3.5-5.8-3.4-9.2-.1-3.4 1.2-6.6 3.6-8.9s5.6-3.5 8.9-3.5c3.9 0 6.9 1.2 9.1 3.5 2.2 2.4 3.4 5.6 3.3 8.9.1 3.4-1.1 6.7-3.5 9.2-2.3 2.4-5.7 3.7-9.1 3.5zm-11.2 86.8v-77c0-1 .4-1.4 1.3-1.4h19.8c.9 0 1.3.5 1.3 1.4v77c0 1.1-.4 1.6-1.3 1.6h-19.6c-1 0-1.5-.6-1.5-1.6z"/>
                 </svg>
             </a>
-            <a href="" title="Vers le site PhpStorm">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            <a href="https://www.jetbrains.com/fr-fr/phpstorm/" hreflang="fr" title="Vers le site PhpStorm">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                      width="48" height="48" viewBox="0 0 70 70"
                      style="enable-background:new 0 0 70 70;" xml:space="preserve">
                     <g>
@@ -604,12 +591,11 @@
             </a>
         </div>
         <div class="links-bottom">
-            <a href="https://gtmetrix.com/" title="Vers le site de GTmetrix">GTmetrix</a>
-            <a href="https://schema.org/" title="Vers le site de Schema.org">Schema.org</a>
-            <a href="https://autoprefixer.github.io/" title="Vers le site de Autoprefixer">Autoprefixer</a>
-            <a href="https://dribbble.com/" title="Vers le site de Dribbble">Dribbble</a>
+            <a href="https://gtmetrix.com/" hreflang="en" title="Vers le site GTmetrix">GTmetrix</a>
+            <a href="https://schema.org/" hreflang="en" title="Vers le site Schema.org">Schema.org</a>
+            <a href="https://autoprefixer.github.io/" hreflang="en" title="Vers le site Autoprefixer">Autoprefixer</a>
+            <a href="https://dribbble.com/" hreflang="en" title="Vers le site Dribbble">Dribbble</a>
         </div>
-        <!--Background-color : Noir-->
     </section>
 </footer>
 </body>

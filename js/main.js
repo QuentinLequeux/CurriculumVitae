@@ -9,8 +9,6 @@ burgerMenu.addEventListener("click", () => {
 
 const icon = document.querySelector('.burger-menu');
 
-// icône burger-menu
-
 function toggleIcon() {
 
     if (icon.textContent === '☰') {
@@ -20,9 +18,7 @@ function toggleIcon() {
     }
 }
 
-icon.addEventListener("click", () => {
-    toggleIcon();
-});
+icon.addEventListener("click", toggleIcon);
 
 // Slider
 
