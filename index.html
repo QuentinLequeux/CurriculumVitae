@@ -40,7 +40,7 @@
     </nav>
     <div class="burger-menu">&#9776;</div>
 </header>
-<main>
+<main class="scroll">
     <div id="sidebar">
     </div>
     <div class="hide">
@@ -94,7 +94,8 @@
                 <p>Adresse email&nbsp;:</p>
                 <span itemprop="email"><a href="#about" title="Envoyer un email à cette adresse">quent789@gmail.com</a></span>
                 <p>Adresse postale&nbsp;:</p>
-                <a href="https://www.google.com/maps/@50.536599,4.8562688,15z?entry=ttu" hreflang="fr" title="Ouvrir dans Google Maps"
+                <a href="https://www.google.com/maps/@50.536599,4.8562688,15z?entry=ttu" hreflang="fr"
+                   title="Ouvrir dans Google Maps"
                    itemscope itemtype="https://schema.org/PostalAddress"
                    itemprop="address"><span itemprop="streetAddress" title="">Rue de la brasserie 12b</span>, <span
                         itemprop="postalCode">5080</span> <span itemprop="addressLocality">Warisoulx</span> <span
@@ -291,7 +292,8 @@
                     Namur</p>
                 <div class="status">
                 </div>
-                <p class="text">Année d'obtention de mon <abbr title="Certificat d'enseignement secondaire supérieur">CESS</abbr> à
+                <p class="text">Année d'obtention de mon <abbr title="Certificat d'enseignement secondaire supérieur">CESS</abbr>
+                    à
                     l'Institut d’enseignement des arts techniques sciences et artisanats à Namur,
                     option création et restauration de meubles. Ainsi que mon diplôme de gestion de base.</p>
                 <a href="#exp">Lire la suite</a>
@@ -303,12 +305,21 @@
                 <p class="bold" itemprop="alumniOf">Institut Provincial d'Enseignement Supérieur - Seilles</p>
                 <div class="status">
                 </div>
-                <p class="text">Obtention de mon attestation de gardiennage, gardien de la paix et steward football ainsi que
+                <p class="text">Obtention de mon attestation de gardiennage, gardien de la paix et steward football
+                    ainsi que
                     plusieurs
                     formations telles que
                     l'<abbr title="Equipier Première Intervention">EPI</abbr> et secourisme industriel.</p>
-                <a href="#exp">Lire la suite</a>
-                <!--Pop-up-->
+                <a class="button" href="#popup-exp">Lire la suite</a>
+                <div class="overlay"></div>
+                <div id="popup-exp" class="popup-exp">
+                    <a href="#exp" class="close-exp">&times;</a>
+                    <div class="content-popup-exp">
+                        <p>Lorem ipsum</p>
+                        <p>Lorem ipsum</p>
+                    </div>
+                    <!--<a href="#" class="close-popup"></a>-->
+                </div>
             </div>
             <div class="exp-content">
                 <p class="bold">2019-2022</p>
@@ -321,7 +332,6 @@
                     J'ai effectué des tâches tels que la
                     réception<!--, contrôle d'accès, surveillance caméra, gestion de logiciel intrusion,...--></p>
                 <a href="#exp">Lire la suite</a>
-                <!--Pop-up-->
             </div>
             <div class="exp-content">
                 <p class="bold">2022-2023</p>
@@ -329,14 +339,14 @@
                 <p class="bold" itemprop="alumniOf">Haute École de la Province de Liège - Seraing</p>
                 <div class="status">
                 </div>
-                <p class="text" itemscope itemtype="https://schema.org/Occupation" itemprop="hasOccupation">Première année de mon
+                <p class="text" itemscope itemtype="https://schema.org/Occupation" itemprop="hasOccupation">Première
+                    année de mon
                     bachelier en techniques infographiques.
                     Acquisitions de multiples compétences : HTML, CSS, Suite Adobe(<span
                             itemprop="skills">Photoshop</span>,
                     <span>Illustrator</span>, <span>Premiere Pro</span>, <span>Xd</span>) <span>Maya</span>,
                     <span>Typographie</span></p>
                 <a href="#exp">Lire la suite</a>
-                <!--Pop-up-->
             </div>
             <div class="exp-content">
                 <p class="bold">2023-2024</p>
@@ -347,7 +357,6 @@
                 <p class="text">Deuxième année de mon bachelier en techniques infographiques
                     Acquisitions des compétences : MySQL, Javascript, PHP, Wordpress, Typescript</p>
                 <a href="#exp">Lire la suite</a>
-                <!--Pop-up-->
             </div>
         </div>
         <!--Animation cercle-->
@@ -359,15 +368,20 @@
                     Ils m'ont fait confiance&nbsp;!
                 </h2>
                 <!--Logo-->
-                <p>Plusieurs avis sur mon travail&nbsp;:</p>
+                <p>Retrouvez ici toutes les entreprises avec lesquels j'ai travailler.</p>
+                <p>Si vous souhaitez en savoir plus sur mon travail vous pouvez cliquer sur le badge de l'entreprise de
+                    votre choix pour afficher le site web réaliser par moi même.</p>
             </div>
-            <div class="comment-image">
-                <a href="#comment" title="Vers le site ..."><img src="./img/logo1.jpg" alt="Logo" width="300"
-                                                                 height="300"></a>
-                <a href="#comment" title="Vers le site ..."><img src="./img/logo2.jpeg" alt="Logo" width="300"
-                                                                 height="300"></a>
-                <a href="#comment" title="Vers le site ..."><img src="./img/logo3.jpg" alt="Logo" width="300"
-                                                                 height="300"></a>
+            <div class="comment-img">
+                <a href="#comment" title="Vers le site ..."><img src="./img/logo1.jpg" alt="Logo d'entreprise"
+                                                                 width="470"
+                                                                 height="470"></a>
+                <a href="#comment" title="Vers le site ..."><img src="./img/logo2.jpeg" alt="Logo d'entreprise"
+                                                                 width="470"
+                                                                 height="470"></a>
+                <a href="#comment" title="Vers le site ..."><img src="./img/logo3.jpg" alt="Logo d'entreprise"
+                                                                 width="470"
+                                                                 height="470"></a>
                 <!--Slider-->
             </div>
         </div>

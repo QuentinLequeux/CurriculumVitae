@@ -33,3 +33,17 @@ slider.addEventListener("input", (e) => {
     sliderLine.style.left = sliderValue;
     sliderIcon.style.left = sliderValue;
 });
+
+const popUpButton = document.querySelector(".button");
+const close = document.querySelector(".close-exp");
+
+function on() {
+    document.querySelector(".overlay").style.display = "block";
+}
+
+function off() {
+    document.querySelector(".overlay").style.display = "none";
+}
+
+popUpButton.addEventListener("click", on);
+close.addEventListener("click", off);
