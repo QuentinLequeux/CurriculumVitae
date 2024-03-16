@@ -137,7 +137,6 @@
                 <p>Au cours de mon apprentissage, j'ai acquis plusieurs compétences. En voici quelques unes.</p>
             </div>
             <!--Logo-->
-
             <div class="slider-image">
                 <div class="slider-wrapper">
                     <img src="/img/html.jpg" alt="">
@@ -177,7 +176,6 @@
                             <span>CV</span>
                             <p>Lorem ipsum</p>
                         </div>
-                        <!--<a href="#" class="close-popup"></a>-->
                     </div>
                     <!--
                     <img src="./img/" width="304" height="176" alt="">
@@ -318,7 +316,6 @@
                         <p>Lorem ipsum</p>
                         <p>Lorem ipsum</p>
                     </div>
-                    <!--<a href="#" class="close-popup"></a>-->
                 </div>
             </div>
             <div class="exp-content">
@@ -389,44 +386,49 @@
     </section>
     <section id="contact">
         <div class="form">
-            <div>
-                <h2 aria-level="2" role="heading">
-                    Contactez-moi&nbsp;!
-                </h2>
-                <!--Logo-->
-                <p>Les champs &#42; sont obligatoires&nbsp;!</p>
+            <div class="background">
+                <div class="title-form">
+                    <h2 aria-level="2" role="heading">
+                        Contactez-moi&nbsp;!
+                    </h2>
+                    <!--Logo-->
+                </div>
+                <form id="form" action="" method="post">
+                    <div class="form-content">
+                        <p>Les champs &#42; sont obligatoires&nbsp;!</p>
+                        <div>
+                            <label for="name">
+                                Nom complet&nbsp;: &#42;
+                            </label>
+                            <input class="input-name" id="name" type="text" name="name" placeholder="Saisir votre nom et prénom">
+                        </div>
+                        <div>
+                            <label for="email">
+                                Adresse email&nbsp;: &#42;
+                            </label>
+                            <input id="email" type="email" name="email" placeholder="Saisir votre adresse e-mail">
+                        </div>
+                        <div>
+                            <label for="message">
+                                Message&nbsp;: &#42;
+                            </label>
+                            <textarea name="message" id="message" cols="30" rows="10"
+                                      placeholder="Ecrivez votre message ici"></textarea>
+                        </div>
+                        <div>
+                            <div class="trapezoid">
+                                <button type="submit" class="form-button">
+                                    Envoyer
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!--Animation cercle-->
             </div>
-            <form id="form" action="" method="post">
-                <div>
-                    <label for="name">
-                        Nom complet&nbsp&nbsp;: &#42;
-                    </label>
-                    <input class="input-name" id="name" type="text" name="name" placeholder="Quentin Lequeux">
-                </div>
-                <div>
-                    <label for="email">
-                        Adresse email&nbsp&nbsp;: &#42;
-                    </label>
-                    <input id="email" type="email" name="email" placeholder="exemple@exemple.com">
-                </div>
-                <div>
-                    <label for="message">
-                        Message&nbsp&nbsp;: &#42;
-                    </label>
-                    <textarea name="message" id="message" cols="30" rows="10"
-                              placeholder="Ecrivez votre message ici"></textarea>
-                </div>
-                <div>
-                    <button type="submit">
-                        Envoyer
-                    </button>
-                </div>
-            </form>
-            <!--Animation cercle-->
         </div>
     </section>
 </main>
-<!-- Footer OK -->
 <footer>
     <section id="footer">
         <h2 aria-level="2" role="heading" class="hidden">

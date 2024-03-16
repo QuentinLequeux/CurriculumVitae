@@ -36,14 +36,20 @@ slider.addEventListener("input", (e) => {
 
 const popUpButton = document.querySelector(".button");
 const close = document.querySelector(".close-exp");
+const overlay = document.querySelector(".overlay");
 
 function on() {
-    document.querySelector(".overlay").style.display = "block";
+    overlay.style.display = "block";
 }
 
 function off() {
-    document.querySelector(".overlay").style.display = "none";
+    overlay.style.display = "none";
+}
+function offPopUp() {
+    overlay.style.display = "none";
+    document.getElementById("popup-exp").style.visibility = "hidden";
 }
 
 popUpButton.addEventListener("click", on);
 close.addEventListener("click", off);
+overlay.addEventListener("click", offPopUp);
