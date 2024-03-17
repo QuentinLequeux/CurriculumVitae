@@ -15,7 +15,7 @@ body {
     scroll-snap-align: center;
 }
 
-#home::after, #about::after, #skills::after, #news::after, #exp::after, #comment::after, #contact::after {
+#home::after, #about::after, #skills::after, #news::after, #hobbies::after, #exp::after, #comment::after, #contact::after {
     content: "";
     top: 8px;
     right: 8px;
@@ -26,7 +26,11 @@ body {
     border: 1px solid #000;
     z-index: 1;
 }
+/*
+#about, #skills, #news, #hobbies, #comment, #contact {
 
+}
+*/
 .hidden {
     visibility: hidden;
     position: absolute;
@@ -234,16 +238,9 @@ li a, .dropbtn {
 }
 
 #about {
-    background-image: url("/img/gradient1.jpg");
+    background-image: url("/img/background.webp");
     background-size: cover;
     position: relative;
-}
-
-@media screen and (max-width: 1920px) {
-    #about {
-        background-image: url("/img/gradient2.jpg");
-        background-size: cover;
-    }
 }
 
 .wrapper-about {
@@ -322,16 +319,9 @@ li a, .dropbtn {
 }
 
 #skills {
-    background-image: url("/img/gradient1.jpg");
+    background-image: url("/img/background.webp");
     background-size: cover;
     position: relative;
-}
-
-@media screen and (max-width: 1920px){
-    #skills {
-        background-image: url("/img/gradient2.jpg");
-        background-size: cover;
-    }
 }
 
 .wrapper-skills {
@@ -477,16 +467,9 @@ li a, .dropbtn {
 }
 
 #news {
-    background-image: url("/img/gradient1.jpg");
+    background-image: url("/img/background.webp");
     background-size: cover;
     position: relative;
-}
-
-@media screen and (max-width: 1920px){
-    #project {
-        background-image: url("/img/gradient2.jpg");
-        background-size: cover;
-    }
 }
 
 .news {
@@ -547,7 +530,9 @@ article {
 }
 
 #hobbies {
-
+    background-image: url("/img/background.webp");
+    background-size: cover;
+    position: relative;
 }
 
 .hobbies {
@@ -706,6 +691,8 @@ article {
 }
 
 #comment {
+    background-image: url("/img/background.webp");
+    background-size: cover;
     position: relative;
 }
 
@@ -771,10 +758,6 @@ article {
     background-size: cover;
 }
 
-.form-content {
-    max-width: 35vw;
-}
-
 @media screen and (max-width: 1024px){
     .background {
         display: flex;
@@ -785,9 +768,14 @@ article {
     }
 }
 
+.form-content {
+    max-width: 35vw;
+}
+
 #form {
     z-index: 2;
     width: 50%;
+    margin-left: 2.5rem;
 }
 
 .form {
@@ -799,11 +787,7 @@ article {
     justify-content: center;
     box-sizing: border-box;
     background: hsla(0,29%,71%,.05);
-    padding: 60px 20px;
-}
-
-.form form {
-    margin-left: 2.5rem;
+    padding: 3.75rem 1.25rem;
 }
 
 .title-form {
@@ -811,29 +795,25 @@ article {
     align-items: center;
 }
 
-textarea {
-    width: 200px;
-}
-
 #contact h2 {
     font-size: 3.875rem;
     text-transform: uppercase;
     margin: 0;
+    min-width: 360px;
+}
+
+.form-content p {
+    font-size: 0.875rem;
 }
 
 #name, #email, #message {
+    box-sizing: border-box;
     border: 1px solid #91a198;
-    box-shadow: 0 20px 32px rgba(63, 101, 97, 0.3);
-    padding: 14px 16px;
+    box-shadow: 0 20px 32px rgba(63,101,97,0.3);
+    padding: 0.875rem 1rem;
     margin-bottom: 1rem;
     outline: none;
-}
-
-#form input {
-    width: 100%;
-}
-
-#form textarea {
+    margin-top: .5rem;
     width: 100%;
 }
 
@@ -854,12 +834,6 @@ textarea {
 #name:focus, #email:focus, #message:focus {
     border-color: red;
 }
-
-.form-content p {
-    font-size: 0.875rem;
-}
-
-/* Footer OK */
 
 #footer {
     background-color: #000;
