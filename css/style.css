@@ -26,11 +26,7 @@ body {
     border: 1px solid #000;
     z-index: 1;
 }
-/*
-#about, #skills, #news, #hobbies, #comment, #contact {
 
-}
-*/
 .hidden {
     visibility: hidden;
     position: absolute;
@@ -54,7 +50,6 @@ body {
     text-transform: uppercase;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     min-height: 5.5rem;
 }
 
@@ -87,7 +82,7 @@ li a, .dropbtn {
     display: none;
     position: absolute;
     background-color: #fff;
-    min-width: 12.5rem;
+    min-width: 15rem;
     box-shadow: 0 20px 32px rgba(63, 101, 97, 0.3);
     border: 1px solid #91a198;
 }
@@ -97,6 +92,7 @@ li a, .dropbtn {
     text-decoration: none;
     display: block;
     text-align: left;
+    margin: 12px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -105,6 +101,25 @@ li a, .dropbtn {
 
 .burger-menu {
     display: none;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    border: 4px solid transparent;
+    border-top: 4px solid #000;
+    display: block;
+    height: 0;
+    right: 0;
+    width: 0;
+    top: calc(50% - 2px);
+    border-bottom: 0;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
@@ -358,7 +373,7 @@ li a, .dropbtn {
     display: flex;
     gap: 2rem;
     width: 100%;
-    filter: drop-shadow(0 8px 24px rgba(0,0,0,.2));
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, .2));
 }
 
 /*
@@ -537,17 +552,79 @@ article {
 
 .hobbies {
     position: relative;
-    top: 20vh;
-    left: 20%;
+    padding-top: calc(10vh + 112px);
+    padding-left: 120px;
+    margin-bottom: 5.625rem;
+    max-width: 166vh;
 }
 
-.hobbies ul {
+.hobbies h2 {
+    font-size: 2rem;
+    margin: 0 0 2.5rem 0;
+}
+
+.content-hobbies {
     display: flex;
-    flex-wrap: wrap;
+}
+
+.main-hobbies {
+    position: relative;
+}
+
+.main-hobbies img {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.main-hobbies a::after {
+    position: absolute;
+    content: "";
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    top: 4px;
+    right: 4px;
+    bottom: 8px;
+    left: 4px;
 }
 
 .nav-hobbies {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+    width: 300px;
+    max-height: 503px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    z-index: 2;
+}
 
+.items {
+    display: flex;
+    margin-bottom: 1.25rem;
+}
+
+.items h3 {
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    align-self: center;
+}
+
+.items img {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .17), 0 8px 32px rgba(0, 0, 0, .15);
+    border: 4px solid transparent;
+}
+
+a[href="#hobbies"] {
+    text-decoration: none;
+    color: #000;
+}
+
+a[href="#hobbies"]:hover {
+    color: #e60000;
+}
+
+.active {
+    border: 4px solid #e60000;
 }
 
 #exp {
@@ -758,11 +835,12 @@ article {
     background-size: cover;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
     .background {
         display: flex;
         flex-direction: column;
     }
+
     #contact h2 {
         min-width: 360px;
     }
@@ -786,7 +864,7 @@ article {
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-    background: hsla(0,29%,71%,.05);
+    background: hsla(0, 29%, 71%, .05);
     padding: 3.75rem 1.25rem;
 }
 
@@ -809,12 +887,17 @@ article {
 #name, #email, #message {
     box-sizing: border-box;
     border: 1px solid #91a198;
-    box-shadow: 0 20px 32px rgba(63,101,97,0.3);
+    box-shadow: 0 20px 32px rgba(63, 101, 97, 0.3);
     padding: 0.875rem 1rem;
     margin-bottom: 1rem;
     outline: none;
     margin-top: .5rem;
     width: 100%;
+}
+
+#message {
+    max-width: 605px;
+    max-height: 190px;
 }
 
 .trapezoid .form-button {
@@ -869,7 +952,7 @@ article {
 
 .copyright {
     font-size: 1.125rem;
-    color: hsla(0,0%,100%,.6);
+    color: hsla(0, 0%, 100%, .6);
     margin-top: 2.5rem;
 }
 
