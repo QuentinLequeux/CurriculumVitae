@@ -387,6 +387,7 @@ li a, .dropbtn {
 */
 
 #projects {
+    background-color: #261812;
     background-image: url("/img/bckg2.jpg");
     background-size: cover;
     position: relative;
@@ -394,43 +395,84 @@ li a, .dropbtn {
 
 .projects {
     position: absolute;
-    top: 20%;
-    max-width: 50em;
-    left: 8.75em;
+    top: calc(50% + 56px);
+    transform: translateY(-50%);
+    max-width: 50rem;
+    width: 100%;
+    left: 8.75rem;
 }
 
 .projects span {
-    color: white;
+    color: #fff;
 }
 
 .projects h2 {
-    color: white;
-    font-size: 3.5em;
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+    text-shadow: 0 2px 24px rgba(0,0,0,.6);
+    margin: 0;
 }
 
 .projects-title {
     display: grid;
     grid-template: repeat(2, 1fr) /repeat(2, 1fr);
-    gap: 2.5em;
+    gap: 2.5rem;
+    margin-top: 2rem;
 }
+
+.title {
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0 20px 32px rgba(0,0,0,.5));
+}
+
+.title::before {
+    background: linear-gradient(180deg,transparent,#000 69.27%);
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    height: 95px;
+    opacity: .3;
+    z-index: 1;
+}
+
+.title::after {
+    content: "";
+    border: 1px solid hsla(0,0%,100%,.2);
+    box-sizing: border-box;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    bottom: 25px;
+    left: 4px;
+    z-index: 1;
+}
+/*
+.title img {
+    object-fit: cover;
+}
+*/
 
 .title h3 {
+    color: #fff;
     position: relative;
-    text-align: center;
-    color: red;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
     margin: 0;
     top: 5em;
-    font-size: 2em;
     text-shadow: 0 2px 24px rgba(0, 0, 0, .6);
-}
-
-.projects-title img {
-    width: 100%;
+    z-index: 1;
 }
 
 .btn1 {
     position: absolute;
     display: inline-block;
+    z-index: 2;
 }
 
 .popup {
@@ -540,7 +582,7 @@ li a, .dropbtn {
     max-width: 520px;
 }
 
-article {
+#news article {
     z-index: 2;
 }
 

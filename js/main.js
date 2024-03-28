@@ -55,9 +55,10 @@ close.addEventListener("click", off);
 overlay.addEventListener("click", offPopUp);
 
 // Border red
-
+/*
 const border = document.querySelector(".items a");
 
 border.addEventListener("click", function() {
     this.classList.add("active");
 });
+*/
