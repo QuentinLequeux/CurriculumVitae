@@ -1,6 +1,25 @@
 body {
-    font-family: "ff-good-web-pro-condensed", sans-serif;
+    font-family: "ff-good-web-pro-condensed", "Quicksand-Bold", sans-serif;
     margin: 0;
+}
+
+#logo {
+    position: absolute;
+    z-index: 3;
+    margin: 15px 0 0 100px;
+    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, .3));
+}
+
+.st6 {
+    fill: #E52421;
+}
+
+.st5 {
+    font-family: "Quicksand-Bold";
+}
+
+.st4 {
+    font-size: 1.125rem;
 }
 
 .scroll {
@@ -10,12 +29,12 @@ body {
     position: relative;
 }
 
-#home, #about, #skills, #projects, #news, #hobbies, #exp, #comment, #comment, #contact, #footer {
+#home, #about, #skills, #projects, #news, #hobbies, #exp, #comment, #comment, #contact {
     min-height: 100vh;
     scroll-snap-align: center;
 }
 
-#home::after, #about::after, #skills::after, #news::after, #hobbies::after, #exp::after, #comment::after, #contact::after {
+#home::after, #about::after, #skills::after, #news::after, #hobbies::after, #exp::after, #comment::after, #contact::after, .popup::after {
     content: "";
     top: 8px;
     right: 8px;
@@ -27,16 +46,21 @@ body {
     z-index: 1;
 }
 
-.hidden {
-    visibility: hidden;
+.sro {
     position: absolute;
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
 }
 
 .menu {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 3;
+    z-index: 5;
 }
 
 .nav {
@@ -143,6 +167,31 @@ li a, .dropbtn {
         z-index: 3;
         margin: .5rem 0 0 1rem;
     }
+
+    .logo {
+        display: none;
+    }
+
+    .scroll {
+        scroll-snap-type: none;
+    }
+
+    .wrapper-about {
+        flex-direction: column;
+    }
+
+    .wrapper-skills {
+        flex-direction: column;
+    }
+
+    .background {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact h2 {
+        min-width: 360px;
+    }
 }
 
 #sidebar {
@@ -189,6 +238,7 @@ li a, .dropbtn {
     background-size: cover;
     background-position: center;
     position: relative;
+    z-index: 4;
 }
 
 @media screen and (max-width: 1920px) {
@@ -305,6 +355,7 @@ li a, .dropbtn {
     position: absolute;
     top: 0;
     width: 50%;
+    z-index: 1;
 }
 
 .image-comparaison .slider {
@@ -323,7 +374,7 @@ li a, .dropbtn {
     left: 50%;
 }
 
-.image-comparaison .slider-icon {
+.slider-icon {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -331,6 +382,8 @@ li a, .dropbtn {
     height: 60px;
     color: #fff;
     transform: translate(-50%, -50%) rotateZ(90deg);
+    z-index: 1;
+    cursor: pointer;
 }
 
 #skills {
@@ -365,8 +418,9 @@ li a, .dropbtn {
 }
 
 .slider-image {
-    overflow-x: auto;
+    overflow-x: scroll;
     z-index: 2;
+    scroll-behavior: smooth;
 }
 
 .slider-wrapper {
@@ -374,17 +428,53 @@ li a, .dropbtn {
     gap: 2rem;
     width: 100%;
     filter: drop-shadow(0 8px 24px rgba(0, 0, 0, .2));
+    box-sizing: content-box;
 }
 
-/*
+.after {
+    position: relative;
+}
 
-.left, .right {
+.right {
     position: absolute;
     top: 110%;
     left: 60%;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: .5;
+    transition: .5s;
 }
 
-*/
+.right:hover, .left:hover {
+    opacity: 1;
+    transition: .5s;
+}
+
+.left {
+    position: absolute;
+    top: 110%;
+    left: 55%;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: .5;
+    transition: .5s;
+}
+
+.after::after {
+    content: "";
+    top: 8px;
+    right: 4px;
+    bottom: 8px;
+    left: 8px;
+    position: absolute;
+    border: 1px solid hsla(0,0%,100%,.2);
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.after img {
+    height: 100%;
+}
 
 #projects {
     background-color: #261812;
@@ -402,16 +492,12 @@ li a, .dropbtn {
     left: 8.75rem;
 }
 
-.projects span {
-    color: #fff;
-}
-
 .projects h2 {
     color: #fff;
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 3.5rem;
-    text-shadow: 0 2px 24px rgba(0,0,0,.6);
+    text-shadow: 0 2px 24px rgba(0, 0, 0, .6);
     margin: 0;
 }
 
@@ -425,11 +511,11 @@ li a, .dropbtn {
 .title {
     display: flex;
     justify-content: center;
-    filter: drop-shadow(0 20px 32px rgba(0,0,0,.5));
+    filter: drop-shadow(0 20px 32px rgba(0, 0, 0, .5));
 }
 
 .title::before {
-    background: linear-gradient(180deg,transparent,#000 69.27%);
+    background: linear-gradient(180deg, transparent, #000 69.27%);
     content: "";
     position: absolute;
     right: 0;
@@ -442,7 +528,7 @@ li a, .dropbtn {
 
 .title::after {
     content: "";
-    border: 1px solid hsla(0,0%,100%,.2);
+    border: 1px solid hsla(0, 0%, 100%, .2);
     box-sizing: border-box;
     position: absolute;
     top: 4px;
@@ -451,6 +537,7 @@ li a, .dropbtn {
     left: 4px;
     z-index: 1;
 }
+
 /*
 .title img {
     object-fit: cover;
@@ -477,22 +564,24 @@ li a, .dropbtn {
 
 .popup {
     position: fixed;
-    /*text-align: center;*/
-    /*border-radius: 0.5em;*/
     top: 0;
     left: 0;
     min-width: 100%;
     min-height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    visibility: hidden;
+    z-index: 5;
+    background-image: url("/img/projects.jpg");
+    background-size: cover;
+    /*text-align: center;*/
+    /*border-radius: 0.5em;*/
     /*padding: 10%;*/
     /*color: #000;*/
     /*transform: translate(-50%, -50%);*/
-    background-color: rgba(0, 0, 0, 1);
-    visibility: hidden;
     /*opacity: 0;*/
     /*transition: opacity .5s, visibility 0s linear .5s;*/
-    z-index: 1;
-    background-image: url("/img/home1.jpg");
-    background-size: cover;
+    /*background-image: url("/img/home1.jpg");
+    background-size: cover;*/
 }
 
 .content-popup {
@@ -502,8 +591,34 @@ li a, .dropbtn {
     background: rgba(0, 0, 0, .7);
     color: white;
     position: absolute;
-    left: 6.25em;
-    bottom: 1.75em;
+    left: 6.25rem;
+    bottom: 1.75rem;
+    box-sizing: border-box;
+    gap: 1rem;
+    width: 600px;
+    padding: 32px 20px 16px 40px;
+}
+
+.content-popup span {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    text-shadow: 0 2px 24px rgba(0, 0, 0.6);
+}
+
+.content-popup p {
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    text-shadow: 0 2px 24px rgba(0, 0, 0.6);
+}
+
+.content-popup a {
+    position: relative;
+    color: #fff;
+    z-index: 2;
 }
 
 .close {
@@ -511,10 +626,11 @@ li a, .dropbtn {
     position: absolute;
     right: .5em;
     top: 1rem;
-    /*padding: 5px;*/
-    color: #fff;
-    /*transition: color .3s;*/
+    color: #000;
     font-size: 4rem;
+    z-index: 2;
+    /*padding: 5px;*/
+    /*transition: color .3s;*/
     /*line-height: 1.5;*/
 }
 
@@ -725,6 +841,8 @@ a[href="#hobbies"]:hover {
     padding: 0 8.75em; /* 10% */
     overflow-x: auto;
     z-index: 2;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 .timeline a {
@@ -786,6 +904,22 @@ a[href="#hobbies"]:hover {
     z-index: 2;
 }
 
+.content-popup-exp {
+    padding: 2rem 7.5rem;
+}
+
+.content-popup-exp p:first-child {
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+}
+
+.content-popup-exp p:last-child {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    width: 100%;
+}
+
 .popup-exp:target {
     visibility: visible;
 }
@@ -798,6 +932,15 @@ a[href="#hobbies"]:hover {
     font-size: 4rem;
 }
 
+@keyframes apparition {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, .65);
+    }
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -807,6 +950,24 @@ a[href="#hobbies"]:hover {
     background-color: rgba(0, 0, 0, .5);
     display: none;
     z-index: 1;
+    animation: apparition 1s ease forwards;
+}
+
+.left1, .right1 {
+    display: inline-block;
+    position: relative;
+    margin: 50px 50px 0 0;
+    left: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: .5s;
+    opacity: .5;
+}
+
+.left1:hover, .right1:hover {
+    opacity: 1;
+    transition: .5s;
 }
 
 #comment {
@@ -843,6 +1004,8 @@ a[href="#hobbies"]:hover {
     display: flex;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, .24)) drop-shadow(0 8px 32px rgba(0, 0, 0, .3));
     overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
 }
 
 .comment-title {
@@ -871,21 +1034,27 @@ a[href="#hobbies"]:hover {
     font-weight: 700;
 }
 
+.left2, .right2 {
+    display: inline-block;
+    position: relative;
+    left: 70%;
+    margin: 250px 50px 0 0;
+    font-size: 2rem;
+    opacity: .5;
+    transition: .5s;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.left2:hover, .right2:hover {
+    opacity: 1;
+    transition: .5s;
+}
+
 #contact {
     position: relative;
     background-image: url("/img/background.webp");
     background-size: cover;
-}
-
-@media screen and (max-width: 1024px) {
-    .background {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #contact h2 {
-        min-width: 360px;
-    }
 }
 
 .form-content {
@@ -963,6 +1132,7 @@ a[href="#hobbies"]:hover {
 #footer {
     background-color: #000;
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 .links-top, .links-bottom {

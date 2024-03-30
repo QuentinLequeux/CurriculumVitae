@@ -20,7 +20,7 @@ function toggleIcon() {
 
 icon.addEventListener("click", toggleIcon);
 
-// Slider
+// Slider comparaison
 
 const slider = document.querySelector(".image-comparaison .slider");
 const beforeImage = document.querySelector(".image-comparaison .before");
@@ -34,25 +34,79 @@ slider.addEventListener("input", (e) => {
     sliderIcon.style.left = sliderValue;
 });
 
-const popUpButton = document.querySelector(".button");
+// Slider skills
+
+const imgList = document.querySelector(".slider-image");
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
+
+right.addEventListener('click', (e) => {
+    //console.log(e.currentTarget);
+    imgList.scrollBy(750, 0);
+});
+
+left.addEventListener('click', (e) => {
+    //console.log(e.currentTarget);
+    imgList.scrollBy(-750, 0);
+});
+
+// Pop-up exp
+
+const popUpButtons = document.querySelectorAll(".button");
 const close = document.querySelector(".close-exp");
 const overlay = document.querySelector(".overlay");
+const popUp = document.getElementById("popup-exp");
 
 function on() {
     overlay.style.display = "block";
+    popUp.style.visibility = "visible";
 }
 
 function off() {
     overlay.style.display = "none";
-}
-function offPopUp() {
-    overlay.style.display = "none";
-    document.getElementById("popup-exp").style.visibility = "hidden";
+    popUp.style.visibility = "hidden";
 }
 
-popUpButton.addEventListener("click", on);
+function offPopUp(e) {
+    if (e.currentTarget === overlay) {
+        off();
+    }
+}
+
+popUpButtons.forEach((popUpButton) => {
+    popUpButton.addEventListener("click", on);
+});
+
 close.addEventListener("click", off);
 overlay.addEventListener("click", offPopUp);
+
+// Slider exp
+
+const line = document.querySelector(".timeline");
+const left1 = document.querySelector(".left1");
+const right1 = document.querySelector(".right1");
+
+left1.addEventListener("click", () => {
+    line.scrollBy(-300, 0);
+});
+
+right1.addEventListener("click", () => {
+    line.scrollBy(300, 0);
+});
+
+// Slider comment
+
+const comment = document.querySelector(".comment-img");
+const left2 = document.querySelector(".left2");
+const right2 = document.querySelector(".right2");
+
+right2.addEventListener("click", () => {
+    comment.scrollBy(400, 0);
+});
+
+left2.addEventListener("click", () => {
+    comment.scrollBy(-400, 0);
+});
 
 // Border red
 /*

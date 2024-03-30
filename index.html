@@ -15,11 +15,25 @@
 </head>
 <body itemscope itemtype="https://schema.org/Person">
 <header>
-    <h1 aria-level="1" role="heading" class="hidden">
+    <h1 aria-level="1" role="heading" class="sro">
         CV de Quentin Lequeux
     </h1>
+    <a href="#home" class="logo" title="Vers la page d'accueil">
+        <?xml version="1.0" encoding="utf-8"?>
+        <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+             width="100px" height="110px" viewBox="0 0 170 170" xml:space="preserve">
+            <g>
+        <polygon points="66.06,86.3 74.57,77.79 128.99,132.22 146.07,115.14 154.4,123.48 128.82,149.06 	"/>
+                <path class="st6" d="M97.07,126.62c-6.45,3.02-13.63,4.71-21.22,4.71c-27.69,0-50.14-22.45-50.14-50.14s22.45-50.14,50.14-50.14
+            s50.14,22.45,50.14,50.14c0,11.34-3.77,21.8-10.12,30.2l7.14,7.14c8.13-10.26,13.01-23.23,13.01-37.34
+            c0-33.23-26.94-60.17-60.17-60.17S15.68,47.96,15.68,81.19s26.94,60.17,60.17,60.17c10.39,0,20.16-2.63,28.69-7.27L97.07,126.62z"
+                />
+        </g>
+            <text transform="matrix(1 0 0 1 19.843 174.8974)" class="st5 st4">Quentin Lequeux</text>
+        </svg>
+    </a>
     <nav class="menu">
-        <h2 class="hidden" aria-level="2" role="heading">
+        <h2 class="sro" aria-level="2" role="heading">
             Navigation principale
         </h2>
         <ul class="nav">
@@ -60,7 +74,6 @@
             <h2 aria-level="2" role="heading" itemprop="name">
                 Quentin Lequeux
             </h2>
-            <!--Logo-->
             <p class="job" itemprop="JobTitle">Développeur Web</p>
             <p class="description">Je m'appelle Quentin Lequeux, je suis <span itemprop="nationality">belge</span> et
                 actuellement étudiant à l'<abbr
@@ -76,15 +89,13 @@
                     <a href="#contact" title="Vers mon formulaire de contact">Contactez-moi&nbsp;!</a>
                 </div>
             </div>
-            <!--Animation cercle-->
         </div>
     </section>
     <section id="about">
         <div class="wrapper-about">
-            <h2 aria-level="2" role="heading" class="hidden">
+            <h2 aria-level="2" role="heading" class="sro">
                 A propos de moi
             </h2>
-            <!--Logo-->
             <aside class="content-about">
                 <h3 aria-level="3" role="heading">
                     Coordonnées
@@ -135,18 +146,23 @@
                 </h2>
                 <p>Au cours de mon apprentissage, j'ai acquis plusieurs compétences. En voici quelques unes.</p>
             </div>
-            <!--Logo-->
             <div class="slider-image">
                 <div class="slider-wrapper">
-                    <img src="/img/html.jpg" alt="">
-                    <img src="/img/css.jpg" alt="">
-                    <img src="/img/php.jpg" alt="">
-                    <img src="/img/fullstack.jpg" alt="">
+                    <div class="after">
+                        <img src="/img/html.jpg" alt="">
+                    </div>
+                    <div class="after">
+                        <img src="/img/css.jpg" alt="">
+                    </div>
+                    <div class="after">
+                        <img src="/img/php.jpg" alt="">
+                    </div>
+                    <div class="after">
+                        <img src="/img/fullstack.jpg" alt="">
+                    </div>
                 </div>
-                <!--
-                <div class="left">&#9665;</div>
-                <div class="right">&#9655;</div>
-                -->
+                <div class="left">&#8678;</div>
+                <div class="right">&#8680;</div>
             </div>
             <!--<span itemprop="skills">HTML</span>
             <span itemprop="skills">CSS</span>
@@ -159,23 +175,25 @@
         </div>
     </section>
     <section id="projects" itemscope itemtype="https://schema.org/CreativeWork" itemprop="knowAbout">
+        <div id="popup" class="popup">
+            <a href="#projects" class="close">&times;</a>
+            <div class="content-popup">
+                <span>CV</span>
+                <p>Création d'un CV digital. Inspiré du site <a href="https://www.thewitcher.com/be/fr/witcher3"
+                                                                hreflang="fr" title="Vers le site thewitcher.com">The
+                    Witcher 3</a>. Premier projet à réaliser pour le cours de Design Web.</p>
+            </div>
+        </div>
         <div class="projects">
             <h2 aria-level="2" role="heading">
                 Mes réalisations
             </h2>
             <div class="projects-title">
                 <article class="title">
-                    <a href="#skills" class="btn1"><img src="/img/logo-alsa.png" width="380" height="212" alt=""></a>
+                    <a href="#popup" class="btn1"><img src="/img/logo-alsa.png" width="380" height="212" alt=""></a>
                     <h3 aria-level="3" role="heading" itemprop="workExample">
                         CV
                     </h3>
-                    <div id="popup" class="popup">
-                        <a href="#projects" class="close">&times;</a>
-                        <div class="content-popup">
-                            <span>CV</span>
-                            <p>Lorem ipsum</p>
-                        </div>
-                    </div>
                 </article>
                 <div>
                     <img src="./img/logo-alsa.png" width="380" height="212" alt="">
@@ -200,7 +218,6 @@
             Actualités
         </h2>
         <div class="news">
-            <!--Logo-->
             <article>
                 <a href="https://www.alsacreations.com/astuce/lire/1925-Optimiser-le-poids-des-images-SVG.html"
                    title="Vers le site Alsacréations">
@@ -291,7 +308,6 @@
         <h2 aria-level="2" role="heading">
             Mon parcours
         </h2>
-        <!--Logo-->
         <div class="exp-links">
             <a href="#exp">Formations</a>
             <a href="#exp">Parcours</a> <!--Photos représentant la formation -->
@@ -308,8 +324,7 @@
                     à
                     l'Institut d’enseignement des arts techniques sciences et artisanats à Namur,
                     option création et restauration de meubles. Ainsi que mon diplôme de gestion de base.</p>
-                <a href="#exp">Lire la suite</a>
-                <!-- TODO Pop-up -->
+                <a class="button" href="#popup-exp">Lire la suite</a>
             </div>
             <div class="exp-content">
                 <p class="bold">2018-2019</p>
@@ -327,8 +342,10 @@
                 <div id="popup-exp" class="popup-exp">
                     <a href="#exp" class="close-exp">&times;</a>
                     <div class="content-popup-exp">
-                        <p>Lorem ipsum</p>
-                        <p>Lorem ipsum</p>
+                        <p>7ème Assistant Métiers de la Prévention et de la Sécurité</p>
+                        <p>Obtention de mon attestation de gardiennage, gardien de la paix et steward football ainsi que plusieurs
+                            formations telles que l'<abbr title="Equipier Première Intervention">EPI</abbr> et secourisme industriel.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -342,7 +359,7 @@
                     Agent de sécurité à l'Université du Luxembourg (Belval) pour la société <span itemprop="worksFor">Dussmann Security</span>.
                     J'ai effectué des tâches tels que la
                     réception<!--, contrôle d'accès, surveillance caméra, gestion de logiciel intrusion,...--></p>
-                <a href="#exp">Lire la suite</a>
+                <a class="button" href="#popup-exp">Lire la suite</a>
             </div>
             <div class="exp-content">
                 <p class="bold">2022-2023</p>
@@ -357,7 +374,7 @@
                             itemprop="skills">Photoshop</span>,
                     <span>Illustrator</span>, <span>Premiere Pro</span>, <span>Xd</span>) <span>Maya</span>,
                     <span>Typographie</span></p>
-                <a href="#exp">Lire la suite</a>
+                <a class="button" href="#popup-exp">Lire la suite</a>
             </div>
             <div class="exp-content">
                 <p class="bold">2023-2024</p>
@@ -367,10 +384,11 @@
                 </div>
                 <p class="text">Deuxième année de mon bachelier en techniques infographiques
                     Acquisitions des compétences : MySQL, Javascript, PHP, Wordpress, Typescript</p>
-                <a href="#exp">Lire la suite</a>
+                <a class="button" href="#popup-exp">Lire la suite</a>
             </div>
         </div>
-        <!--Animation cercle-->
+        <div class="left1">&#8678;</div>
+        <div class="right1">&#8680;</div>
     </section>
     <section id="comment">
         <div class="wrapper-comment">
@@ -396,7 +414,8 @@
                 <!--Slider-->
             </div>
         </div>
-        <!--Animation cercle-->
+        <div class="left2">&#8678;</div>
+        <div class="right2">&#8680;</div>
     </section>
     <section id="contact">
         <div class="form">
@@ -445,7 +464,7 @@
 </main>
 <footer>
     <section id="footer">
-        <h2 aria-level="2" role="heading" class="hidden">
+        <h2 aria-level="2" role="heading" class="sro">
             Footer
         </h2>
         <div class="links-top">
