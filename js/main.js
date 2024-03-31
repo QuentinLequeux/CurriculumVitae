@@ -46,8 +46,18 @@ right.addEventListener('click', (e) => {
 });
 
 left.addEventListener('click', (e) => {
-    //console.log(e.currentTarget);
     imgList.scrollBy(-750, 0);
+});
+
+// images hobbies
+
+const images = document.querySelectorAll(".nav-hobbies a");
+
+images.forEach((image) => {
+    image.addEventListener("click", (e) => {
+        const img = e.currentTarget.querySelector("img");
+        document.querySelector(".main-hobbies img").src = img.src;
+    });
 });
 
 // Pop-up exp
