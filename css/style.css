@@ -1,7 +1,11 @@
 body {
-    font-family: "ff-good-web-pro-condensed", "Quicksand-Bold", sans-serif;
+    font-family: "ff-good-web-pro-condensed", sans-serif;
     margin: 0;
     scrollbar-width: thin;
+}
+
+i {
+    font-style: normal;
 }
 
 #logo {
@@ -11,16 +15,16 @@ body {
     filter: drop-shadow(0 4px 16px rgba(0, 0, 0, .3));
 }
 
-.st6 {
-    fill: #E52421;
+.st4 {
+    font-size: 1.125rem;
 }
 
 .st5 {
-    font-family: "Quicksand-Bold";
+    font-family: "Quicksand-Bold", sans-serif;
 }
 
-.st4 {
-    font-size: 1.125rem;
+.st6 {
+    fill: #E52421;
 }
 
 .scroll {
@@ -89,11 +93,11 @@ body {
 }
 
 .nav a[href="#contact"] {
-    color: red;
+    color: #e60000;
 }
 
 .nav li a:hover {
-    color: red;
+    color: #e60000;
 }
 
 li a, .dropbtn {
@@ -154,7 +158,7 @@ li a, .dropbtn {
         display: none;
         flex-direction: column;
         width: 100vw;
-        background-color: white;
+        background-color: #fff;
     }
 
     .nav.show {
@@ -166,7 +170,7 @@ li a, .dropbtn {
         cursor: pointer;
         font-size: 2rem;
         position: fixed;
-        z-index: 3;
+        z-index: 5;
         margin: .5rem 0 0 1rem;
     }
 
@@ -195,8 +199,16 @@ li a, .dropbtn {
         flex-direction: column;
     }
 
+    .news article {
+        display: none;
+    }
+
     #contact h2 {
         min-width: 360px;
+    }
+
+    .form-content {
+        min-width: 50vw;
     }
 }
 
@@ -319,12 +331,12 @@ li a, .dropbtn {
     position: absolute;
     top: -33px;
     left: 17%;
-    color: red;
+    color: #e60000;
     text-decoration: none;
 }
 
 .trapezoid a[href="#contact"] {
-    color: black;
+    color: #000;
 }
 
 .buttons {
@@ -469,28 +481,25 @@ li a, .dropbtn {
     position: relative;
 }
 
-.right {
+.right, .left {
     position: absolute;
     top: 110%;
-    left: 60%;
     font-size: 2rem;
     cursor: pointer;
     opacity: .5;
     transition: .5s;
+}
+
+.right {
+    left: 60%;
+}
+
+.left {
+    left: 55%;
 }
 
 .right:hover, .left:hover {
     opacity: 1;
-    transition: .5s;
-}
-
-.left {
-    position: absolute;
-    top: 110%;
-    left: 55%;
-    font-size: 2rem;
-    cursor: pointer;
-    opacity: .5;
     transition: .5s;
 }
 
@@ -504,10 +513,6 @@ li a, .dropbtn {
     border: 1px solid hsla(0, 0%, 100%, .2);
     z-index: 1;
     box-sizing: border-box;
-}
-
-.after img {
-    height: 100%;
 }
 
 #projects {
@@ -562,6 +567,7 @@ li a, .dropbtn {
     z-index: 1;
 }
 */
+
 /*
 .title::after {
     content: "";
@@ -575,6 +581,7 @@ li a, .dropbtn {
     z-index: 1;
 }
 */
+
 /*
 .title h3 {
     color: #fff;
@@ -588,13 +595,14 @@ li a, .dropbtn {
     z-index: 1;
 }
 */
+
+/*
 .btn1 {
-    /*
     position: absolute;
     display: inline-block;
     z-index: 2;
-    */
 }
+*/
 
 .popup, .popup2, .popup3, .popup4 {
     position: fixed;
@@ -607,15 +615,13 @@ li a, .dropbtn {
     z-index: 5;
     background-image: url("/img/projects.jpg");
     background-size: cover;
-    /*text-align: center;*/
-    /*border-radius: 0.5em;*/
-    /*padding: 10%;*/
-    /*color: #000;*/
-    /*transform: translate(-50%, -50%);*/
-    /*opacity: 0;*/
-    /*transition: opacity .5s, visibility 0s linear .5s;*/
-    /*background-image: url("/img/home1.jpg");
-    background-size: cover;*/
+    /*text-align: center;
+    border-radius: 0.5em;
+    padding: 10%;
+    color: #000;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .5s, visibility 0s linear .5s;*/
 }
 
 .popup2 {
@@ -633,9 +639,9 @@ li a, .dropbtn {
 .content-popup {
     display: flex;
     flex-direction: column;
-    min-width: 37.5em;
+    min-width: 37.5rem;
     background: rgba(0, 0, 0, .7);
-    color: white;
+    color: #fff;
     position: absolute;
     left: 6.25rem;
     bottom: 1.75rem;
@@ -675,9 +681,7 @@ li a, .dropbtn {
     color: #000;
     font-size: 4rem;
     z-index: 2;
-    /*padding: 5px;*/
-    /*transition: color .3s;*/
-    /*line-height: 1.5;*/
+    padding: 0 1rem 0 1rem;
 }
 
 .popup:target, .popup2:target, .popup3:target, .popup4:target {
@@ -703,7 +707,7 @@ li a, .dropbtn {
     position: relative;
     top: 20vh;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .news-content {
@@ -717,7 +721,7 @@ li a, .dropbtn {
 }
 
 .news-content a:hover, .news article a:hover {
-    color: red;
+    color: #e60000;
 }
 
 .news-content a {
@@ -777,7 +781,7 @@ li a, .dropbtn {
 
 .main-hobbies img {
     width: 100%;
-    /* aspect-ratio: 16/9; */
+    aspect-ratio: 16/9;
 }
 
 .main-hobbies a::after {
@@ -840,13 +844,13 @@ li a, .dropbtn {
 
 #exp h2 {
     font-size: 3.5rem;
-    margin: 0 8.75rem; /* 10% */
+    margin: 0 8.75rem;
     padding-top: 20vh;
     min-width: 18.75rem;
 }
 
 .exp-links {
-    margin: 1.125rem 8.75rem; /* 10% */
+    margin: 1.125rem 8.75rem;
     min-width: 18.75rem;
 }
 
@@ -862,7 +866,7 @@ li a, .dropbtn {
 }
 
 .exp-links a:hover {
-    color: red;
+    color: #e60000;
 }
 
 .exp-links a:active::after {
@@ -884,11 +888,11 @@ li a, .dropbtn {
     display: flex;
     align-items: flex-end;
     margin-top: 10vh;
-    padding: 0 8.75em; /* 10% */
+    padding: 0 8.75em;
     overflow-x: auto;
     z-index: 2;
     scroll-behavior: smooth;
-    scrollbar-width: none;
+    scrollbar-width: thin;
 }
 
 .timeline a {
@@ -901,7 +905,7 @@ li a, .dropbtn {
 
 .exp-content {
     flex-shrink: 0;
-    width: 390px; /*24.375rem*/
+    width: 390px; /* 24.375rem */
 }
 
 .exp-content p {
@@ -1164,7 +1168,7 @@ li a, .dropbtn {
     position: absolute;
     top: -35px;
     left: 22%;
-    color: red;
+    color: #e60000;
     text-decoration: none;
     border: none;
     background-color: transparent;
@@ -1172,7 +1176,7 @@ li a, .dropbtn {
 }
 
 #name:focus, #email:focus, #message:focus {
-    border-color: red;
+    border-color: #e60000;
 }
 
 #footer {
