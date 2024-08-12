@@ -1,3 +1,11 @@
+/*
+
+html, html * {
+    box-sizing: content-box;
+}
+
+*/
+
 body {
     font-family: "ff-good-web-pro-condensed", sans-serif;
     margin: 0;
@@ -15,12 +23,11 @@ i {
     filter: drop-shadow(0 4px 16px rgba(0, 0, 0, .3));
 }
 
-.st4 {
-    font-size: 1.125rem;
-}
-
 .st5 {
-    font-family: "Quicksand-Bold", sans-serif;
+    font-family: quicksand, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.125rem;
 }
 
 .st6 {
@@ -40,7 +47,7 @@ i {
 }
 
 #home::after, #about::after, #skills::after, #news::after, #hobbies::after, #exp::after, #comment::after, #contact::after,
-.popup::after, .popup2::after, .popup3::after, .popup4::after {
+.popup::after, .popup2::after, .popup3::after, .popup4::after, .sidebar-hidden::after {
     content: "";
     top: 8px;
     right: 8px;
@@ -203,12 +210,8 @@ li a, .dropbtn {
         display: none;
     }
 
-    #contact h2 {
-        min-width: 360px;
-    }
-
     .form-content {
-        min-width: 50vw;
+        min-width: 70vw;
     }
 }
 
@@ -265,6 +268,7 @@ li a, .dropbtn {
 }
 
 .sidebar-hidden a {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -272,6 +276,7 @@ li a, .dropbtn {
     text-decoration: none;
     color: #fff;
     font-size: 1.125rem;
+    z-index: 2;
 }
 
 .sidebar-hidden a:hover {
@@ -298,14 +303,19 @@ li a, .dropbtn {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 20%;
-    right: 20%;
+    top: 45%;
+    right: 15%;
     font-size: 1.125rem;
     color: #fff;
     min-width: 50%;
     margin-left: 40%;
     text-align: center;
     z-index: 2;
+}
+
+#wrapper {
+    position: absolute;
+    top: -110%;
 }
 
 .description, .job {
@@ -378,6 +388,15 @@ li a, .dropbtn {
 
 .content-about a:hover {
     text-decoration: underline;
+}
+
+.content-about p {
+    display: flex;
+    align-items: center;
+}
+
+img[alt="icone"] {
+    margin-right: .5rem;
 }
 
 .image-comparaison {
@@ -506,7 +525,7 @@ li a, .dropbtn {
 .after::after {
     content: "";
     top: 8px;
-    right: 4px;
+    right: 8px;
     bottom: 8px;
     left: 8px;
     position: absolute;
@@ -712,12 +731,16 @@ li a, .dropbtn {
 
 .news-content {
     background: rgba(0, 0, 0, .05);
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 0;
     z-index: 2;
 }
 
 .news-content li {
-    list-style-type: square;
+    list-style-type: none;
+}
+
+a[href="https://www.alsacreations.com/home/0"] {
+    margin-left: 2.5rem;
 }
 
 .news-content a:hover, .news article a:hover {
@@ -727,6 +750,8 @@ li a, .dropbtn {
 .news-content a {
     color: #000;
     font-size: 1.25rem;
+    padding-left: 0;
+    line-height: 1.5rem;
 }
 
 .news article a {
@@ -1027,6 +1052,8 @@ li a, .dropbtn {
 }
 
 .wrapper-comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 2.5rem;
     position: relative;
@@ -1051,18 +1078,29 @@ li a, .dropbtn {
 }
 
 .comment-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-filter: drop-shadow(0 2px 5px rgba(0, 0, 0, .24)) drop-shadow(0 8px 32px rgba(0, 0, 0, .3));
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, .24)) drop-shadow(0 8px 32px rgba(0, 0, 0, .3));
     overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-width: thin;
 }
 
 .comment-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 1rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     max-width: 450px;
 }
@@ -1091,6 +1129,8 @@ li a, .dropbtn {
     margin: 250px 50px 0 0;
     font-size: 2rem;
     opacity: .5;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     cursor: pointer;
     z-index: 2;
@@ -1098,6 +1138,8 @@ li a, .dropbtn {
 
 .left2:hover, .right2:hover {
     opacity: 1;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -1122,23 +1164,30 @@ li a, .dropbtn {
 }
 
 .background {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background: hsla(0, 29%, 71%, .05);
+    background: hsla(0, 29%, 71%, .0    5);
     padding: 3.75rem 1.25rem;
 }
 
 .title-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 #contact h2 {
     font-size: 3.875rem;
     text-transform: uppercase;
-    margin: 0;
-    min-width: 360px;
 }
 
 .form-content p {
@@ -1146,8 +1195,10 @@ li a, .dropbtn {
 }
 
 #name, #email, #message {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #91a198;
+    -webkit-box-shadow: 0 20px 32px rgba(63, 101, 97, 0.3);
     box-shadow: 0 20px 32px rgba(63, 101, 97, 0.3);
     padding: 0.875rem 1rem;
     margin-bottom: 1rem;
@@ -1159,6 +1210,8 @@ li a, .dropbtn {
 #message {
     max-width: 605px;
     max-height: 190px;
+    min-width: 605px;
+    min-height: 190px;
 }
 
 .trapezoid .form-button {
@@ -1182,28 +1235,38 @@ li a, .dropbtn {
 #footer {
     background-color: #000;
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
 }
 
 .links-top, .links-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    justify-content: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
 }
 
 .links-top a, .links-bottom a {
     color: #fff;
     font-size: 1.125rem;
     font-weight: 600;
-    letter-spacing: .2em;
+    letter-spacing: .2rem;
     text-decoration: none;
     text-transform: uppercase;
-    margin: 2.5rem 0 0 2rem;
+    margin: 3rem 0 0 2rem;
 }
 
 .socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 2.5rem;
 }
@@ -1221,13 +1284,20 @@ li a, .dropbtn {
 .line {
     margin: 2.5rem auto 0;
     border-bottom: 1px solid #2c2c2c;
-    width: 70%;
+    width: 70vw;
 }
 
 .logos-top, .logos-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 2.5rem;
     gap: 2rem;
@@ -1239,4 +1309,75 @@ li a, .dropbtn {
 
 .st3 {
     fill: #31A8FF;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .exp-links {
+        margin-left: 3rem;
+    }
+
+    .timeline {
+        padding: 0;
+        margin-left: 3rem;
+    }
+
+    #comment {
+        min-height: inherit;
+    }
+
+    .wrapper-skills {
+        top: 10vh;
+        margin-left: 3rem;
+    }
+
+    .wrapper-comment {
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .comment-title {
+        max-width: 325px;
+    }
+
+    .comment-title h2 {
+        text-align: center;
+    }
+
+    .comment-img {
+        margin-left: 4rem;
+    }
+
+    .comment-img img {
+        width: 50vw;
+        height: 100%;
+    }
+
+    .left2, .right2 {
+        margin-top: 100px;
+        margin-bottom: 1rem;
+        left: 40%;
+    }
+
+    #contact {
+        min-height: inherit;
+    }
+
+    #form {
+        margin: 0;
+    }
+
+    .background {
+        padding-top: 0;
+    }
+
+    #message {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .socials {
+        justify-content: normal;
+    }
 }
