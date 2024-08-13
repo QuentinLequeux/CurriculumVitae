@@ -159,62 +159,6 @@ li a, .dropbtn {
     cursor: pointer;
 }
 
-@media screen and (max-width: 1024px) {
-
-    .nav {
-        display: none;
-        flex-direction: column;
-        width: 100vw;
-        background-color: #fff;
-    }
-
-    .nav.show {
-        display: flex;
-    }
-
-    .burger-menu {
-        display: inline-block;
-        cursor: pointer;
-        font-size: 2rem;
-        position: fixed;
-        z-index: 5;
-        margin: .5rem 0 0 1rem;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .scroll {
-        scroll-snap-type: none;
-    }
-
-    .hexagon {
-        display: none;
-    }
-
-    .wrapper-about {
-        flex-direction: column;
-    }
-
-    .wrapper-skills {
-        flex-direction: column;
-    }
-
-    .background {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .news article {
-        display: none;
-    }
-
-    .form-content {
-        min-width: 70vw;
-    }
-}
-
 .hexagon {
     position: fixed;
     top: 30%;
@@ -715,7 +659,11 @@ img[alt="icone"] {
 }
 
 .news {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: relative;
     top: 20vh;
@@ -762,7 +710,9 @@ a[href="https://www.alsacreations.com/home/0"] {
 }
 
 .news article a img {
+    -webkit-filter: drop-shadow(0 8px 24px rgba(0, 0, 0, .2));
     filter: drop-shadow(0 8px 24px rgba(0, 0, 0, .2));
+    -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
     box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
     margin-bottom: 1rem;
     width: 100%;
@@ -786,7 +736,7 @@ a[href="https://www.alsacreations.com/home/0"] {
 .hobbies {
     position: relative;
     padding-top: calc(10vh + 112px);
-    padding-left: 120px;
+    padding-left: 7.5rem;
     margin-bottom: 5.625rem;
     max-width: 166vh;
 }
@@ -797,6 +747,8 @@ a[href="https://www.alsacreations.com/home/0"] {
 }
 
 .content-hobbies {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -820,7 +772,12 @@ a[href="https://www.alsacreations.com/home/0"] {
 }
 
 .nav-hobbies {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     padding-left: 3rem;
     width: 300px;
@@ -831,6 +788,8 @@ a[href="https://www.alsacreations.com/home/0"] {
 }
 
 .items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 1.25rem;
 }
@@ -839,10 +798,13 @@ a[href="https://www.alsacreations.com/home/0"] {
     margin-left: 1rem;
     font-size: 1.25rem;
     font-weight: 600;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
 }
 
 .items img {
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .17), 0 8px 32px rgba(0, 0, 0, .15);
     box-shadow: 0 2px 6px rgba(0, 0, 0, .17), 0 8px 32px rgba(0, 0, 0, .15);
     border: 4px solid transparent;
 }
@@ -910,7 +872,11 @@ a[href="https://www.alsacreations.com/home/0"] {
 
 .timeline {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     margin-top: 10vh;
     padding: 0 8.75em;
@@ -929,8 +895,9 @@ a[href="https://www.alsacreations.com/home/0"] {
 }
 
 .exp-content {
+    -ms-flex-negative: 0;
     flex-shrink: 0;
-    width: 390px; /* 24.375rem */
+    width: 24.375rem;
 }
 
 .exp-content p {
@@ -938,8 +905,12 @@ a[href="https://www.alsacreations.com/home/0"] {
 }
 
 .status {
-    padding: 0 40px;
+    padding: 0 2.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     border-top: 4px solid #000;
     position: relative;
@@ -950,6 +921,8 @@ a[href="https://www.alsacreations.com/home/0"] {
     content: "";
     width: 5px;
     height: 5px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     border: 4px solid #000;
     position: absolute;
@@ -969,6 +942,8 @@ a[href="https://www.alsacreations.com/home/0"] {
 
 .popup-exp {
     position: fixed;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
     top: 50%;
     left: 50%;
@@ -1007,6 +982,15 @@ a[href="https://www.alsacreations.com/home/0"] {
     font-size: 4rem;
 }
 
+@-webkit-keyframes apparition {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, .65);
+    }
+}
+
 @keyframes apparition {
     from {
         background-color: rgba(0, 0, 0, 0);
@@ -1025,6 +1009,7 @@ a[href="https://www.alsacreations.com/home/0"] {
     background-color: rgba(0, 0, 0, .5);
     display: none;
     z-index: 1;
+    -webkit-animation: apparition 1s ease forwards;
     animation: apparition 1s ease forwards;
 }
 
@@ -1036,12 +1021,16 @@ a[href="https://www.alsacreations.com/home/0"] {
     font-size: 2rem;
     cursor: pointer;
     z-index: 2;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     opacity: .5;
 }
 
 .left1:hover, .right1:hover {
     opacity: 1;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -1313,6 +1302,97 @@ a[href="https://www.alsacreations.com/home/0"] {
 
 @media screen and (max-width: 1024px) {
 
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100vw;
+        background-color: #fff;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: inline-block;
+        cursor: pointer;
+        font-size: 2rem;
+        position: fixed;
+        z-index: 5;
+        margin: .5rem 0 0 1rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .scroll {
+        scroll-snap-type: none;
+    }
+
+    .hexagon {
+        display: none;
+    }
+
+    .wrapper-about {
+        flex-direction: column;
+    }
+
+    .wrapper-skills {
+        flex-direction: column;
+    }
+
+    .background {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #news {
+        min-height: inherit;
+    }
+
+    #news h2 {
+        top: 2vh;
+    }
+
+    .news {
+        top: 0;
+    }
+
+    .news article {
+        display: none;
+    }
+
+    #hobbies {
+        min-height: inherit;
+    }
+
+    .hobbies {
+        padding: 10vh 2rem 3rem;
+    }
+    .main-hobbies a img {
+        height: auto;
+    }
+
+    .nav-hobbies {
+        display: none;
+    }
+
+    #exp {
+        background-image: inherit;
+        min-height: inherit;
+    }
+
+    #exp h2 {
+        padding-top: 10vh;
+        margin-left: 3rem;
+    }
+
+    .left1, .right1 {
+        left: 35%;
+        margin-bottom: 50px;
+    }
+
     .exp-links {
         margin-left: 3rem;
     }
@@ -1366,6 +1446,10 @@ a[href="https://www.alsacreations.com/home/0"] {
 
     #form {
         margin: 0;
+    }
+
+    .form-content {
+        min-width: 70vw;
     }
 
     .background {
