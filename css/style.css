@@ -401,6 +401,8 @@ img[alt="icone"] {
 }
 
 .wrapper-skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     gap: 2rem;
@@ -413,13 +415,20 @@ img[alt="icone"] {
 }
 
 .content-skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     font-size: 1.125rem;
     line-height: 1.75rem;
 }
 
 .content-skills img {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     margin: 1.75rem 0 1.75rem 0;
     max-width: 100%;
@@ -429,15 +438,17 @@ img[alt="icone"] {
     overflow-x: scroll;
     z-index: 2;
     scroll-behavior: smooth;
+    scrollbar-width: thin;
 }
 
 .slider-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 2rem;
     width: 100%;
+    -webkit-filter: drop-shadow(0 8px 24px rgba(0, 0, 0, .2));
     filter: drop-shadow(0 8px 24px rgba(0, 0, 0, .2));
-    box-sizing: content-box;
-    scrollbar-width: thin;
 }
 
 .after {
@@ -450,6 +461,8 @@ img[alt="icone"] {
     font-size: 2rem;
     cursor: pointer;
     opacity: .5;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -463,6 +476,8 @@ img[alt="icone"] {
 
 .right:hover, .left:hover {
     opacity: 1;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -475,6 +490,7 @@ img[alt="icone"] {
     position: absolute;
     border: 1px solid hsla(0, 0%, 100%, .2);
     z-index: 1;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -1338,13 +1354,39 @@ a[href="https://www.alsacreations.com/home/0"] {
         flex-direction: column;
     }
 
-    .wrapper-skills {
-        flex-direction: column;
-    }
-
     .background {
         display: flex;
         flex-direction: column;
+    }
+
+    #skills {
+        min-height: 70vh;
+    }
+
+    .content-skills {
+    }
+
+    #skills h2 {
+        text-align: center;
+    }
+
+    .wrapper-skills {
+        flex-direction: column;
+        top: 5vh;
+        margin-left: 3rem;
+    }
+
+    .after img {
+        width: 60vw;
+        height: auto;
+    }
+
+    .left {
+        left: 35%;
+    }
+
+    .right {
+        left: 45%;
     }
 
     #news {
@@ -1404,11 +1446,6 @@ a[href="https://www.alsacreations.com/home/0"] {
 
     #comment {
         min-height: inherit;
-    }
-
-    .wrapper-skills {
-        top: 10vh;
-        margin-left: 3rem;
     }
 
     .wrapper-comment {
