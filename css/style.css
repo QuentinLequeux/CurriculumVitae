@@ -227,11 +227,14 @@ li a, .dropbtn {
     color: #e60000;
 }
 
+#home, #about, #skills, #projects, #news, #hobbies, #comment, #contact{
+    background-size: cover;
+    position: relative;
+}
+
 #home {
     background-image: url("/img/home1.jpg");
-    background-size: cover;
     background-position: center;
-    position: relative;
     z-index: 4;
 }
 
@@ -243,8 +246,15 @@ li a, .dropbtn {
 }
 
 .wrapper-home {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: absolute;
     top: 45%;
@@ -265,6 +275,7 @@ li a, .dropbtn {
 .description, .job {
     font-size: 2.75rem;
     font-weight: 700;
+    -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, .85)) drop-shadow(0 6px 28px rgba(0, 0, 0, .7));
     filter: drop-shadow(0 1px 4px rgba(0, 0, 0, .85)) drop-shadow(0 6px 28px rgba(0, 0, 0, .7));
 }
 
@@ -294,8 +305,13 @@ li a, .dropbtn {
 }
 
 .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 2rem 1rem;
     z-index: 2;
@@ -303,15 +319,15 @@ li a, .dropbtn {
 
 #about {
     background-image: url("/img/background.webp");
-    background-size: cover;
-    position: relative;
 }
 
 .wrapper-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 2.5rem;
     padding-top: 30vh;
-    margin: 0 0 0 15rem;
+    margin-left: 15rem;
 }
 
 .content-about {
@@ -335,7 +351,11 @@ li a, .dropbtn {
 }
 
 .content-about p {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -350,12 +370,16 @@ img[alt="icone"] {
 .image-comparaison img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
+    -o-object-position: left;
     object-position: left;
 }
 
 .image-comparaison .image-container {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -389,6 +413,8 @@ img[alt="icone"] {
     width: 60px;
     height: 60px;
     color: #fff;
+    -webkit-transform: translate(-50%, -50%) rotateZ(90deg);
+    -ms-transform: translate(-50%, -50%) rotate(90deg);
     transform: translate(-50%, -50%) rotateZ(90deg);
     z-index: 1;
     cursor: pointer;
@@ -396,8 +422,6 @@ img[alt="icone"] {
 
 #skills {
     background-image: url("/img/background.webp");
-    background-size: cover;
-    position: relative;
 }
 
 .wrapper-skills {
@@ -497,8 +521,6 @@ img[alt="icone"] {
 #projects {
     background-color: #261812;
     background-image: url("/img/bckg2.jpg");
-    background-size: cover;
-    position: relative;
 }
 
 .projects {
@@ -670,8 +692,6 @@ img[alt="icone"] {
 
 #news {
     background-image: url("/img/background.webp");
-    background-size: cover;
-    position: relative;
 }
 
 .news {
@@ -745,8 +765,6 @@ a[href="https://www.alsacreations.com/home/0"] {
 
 #hobbies {
     background-image: url("/img/background.webp");
-    background-size: cover;
-    position: relative;
 }
 
 .hobbies {
@@ -1052,8 +1070,6 @@ a[href="https://www.alsacreations.com/home/0"] {
 
 #comment {
     background-image: url("/img/background.webp");
-    background-size: cover;
-    position: relative;
 }
 
 .wrapper-comment {
@@ -1149,9 +1165,7 @@ a[href="https://www.alsacreations.com/home/0"] {
 }
 
 #contact {
-    position: relative;
     background-image: url("/img/background.webp");
-    background-size: cover;
 }
 
 .form-content {
@@ -1350,13 +1364,40 @@ a[href="https://www.alsacreations.com/home/0"] {
         display: none;
     }
 
-    .wrapper-about {
-        flex-direction: column;
-    }
-
     .background {
         display: flex;
         flex-direction: column;
+    }
+
+    #home {
+        min-height: 90vh;
+    }
+
+    .wrapper-home {
+        top: 40%;
+    }
+
+    .description {
+        font-size: 2rem;
+    }
+
+    #wrapper {
+        top: -35vh;
+    }
+
+    #about {
+        min-height: inherit;
+    }
+
+    .wrapper-about {
+        flex-direction: column;
+        padding-top: 5vh;
+        margin-left: 3rem;
+    }
+
+    .image-comparaison {
+        margin-bottom: 2rem;
+        width: 90%;
     }
 
     #skills {
