@@ -548,6 +548,10 @@ img[alt="icone"] {
     margin-top: 2rem;
 }
 
+.projects-title h3 {
+    color: #fff;
+}
+
 .title {
     position: relative;
     display: flex;
@@ -1191,7 +1195,7 @@ a[href="https://www.alsacreations.com/home/0"] {
     justify-content: center;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background: hsla(0, 29%, 71%, .0    5);
+    background: hsla(0, 29%, 71%, .05);
     padding: 3.75rem 1.25rem;
 }
 
@@ -1400,8 +1404,18 @@ a[href="https://www.alsacreations.com/home/0"] {
         width: 90%;
     }
 
+    .projects {
+        top: 50vh;
+        left: 2rem;
+    }
+
+    .projects-title {
+        grid-template: 1fr / repeat(4, 1fr);
+        overflow-x: auto;
+    }
+
     #skills {
-        min-height: 70vh;
+        min-height: 80vh;
     }
 
     .content-skills {
